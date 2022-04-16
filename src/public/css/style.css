@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif;
+    background-color: #ebebeb;
+}
+
+header {
+    display: block;
+    background-color: white;
+    width: 100%;
+    top: 0px;
+    z-index: 1000;
+    border-bottom: 2px solid #a6a6a6;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    max-width: 1300px;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    display: flex;
+    width: 10%;
+}
+
+.navbar-logo a img {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-categories {
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    width: 80%;
+    text-align: center;
+    align-self: flex-end;
+}
+
+.navbar-categories-list {
+    padding: 0;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.navbar-categories-list>li {
+    display: inline-block;
+    font-size: 1em;
+}
+
+.navbar-categories-list li {
+    margin-right: 25px;
+    height: 100%;
+    padding-bottom: 1px;
+}
+
+.navbar-categories-link {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 300ms ease-in-out; 
+}
+.navbar-categories-link:hover {
+    border-bottom: 2px solid red;
+    color: red;
+}
+
+.navbar-categories li i {
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    margin-left: 5px;
+    height: 13px;
+    transition: all 100ms ease-in-out;
+}
+
+.navbar-categories li a:hover > i{
+    transform: rotate(90deg);
+    color: red;
+}
+
+.navbar-account-cart {
+    width: 10%;
+    height: 70.69px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 28px;
+}
+
+.navbar-account-cart-link {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+}
+.navbar-account-cart-link:hover{
+    color: red;
+    border-bottom: 2px solid red;
+}
+
+.navbar-categories-display {
+    position: absolute;
+    display: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    height: 220px;
+    box-shadow: 0 20px 30px 0px rgb(0 0 0 / 30%);
+    margin: 0 auto;
+    border-radius: 0px 0px 70px 70px;
+}
+
+.navbar-categories li:hover .navbar-categories-display {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-menu-display-electricas {
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.display-image-link {
+    width: 16%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.display-image-guitar {
+    width: 90%;
+}
+
+.display-nombre-guitarra {
+    color: black;
+    border-bottom: 1px solid transparent;
+    transition: all 250ms ease-in-out;
+}
+
+.display-image-link:hover > .display-nombre-guitarra{
+    color: red;
+    border-bottom: 1px solid red;
+}
+
+.main-carrousel{
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+
+.main-carrousel div img{
+    width: 100%;
+}
+
+.texto-banner{
+    position: absolute;
+    width: 50%;
+    left: 5%;
+    top: 30%;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 72px;
+    font-weight: bolder;
+}
