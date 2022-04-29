@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cartStyle.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a853d3fc21.js" crossorigin="anonymous"></script>
+    <title>Carrito</title>
+</head>
+
+<body>
+    <h1 class="cart-h1">Mi compra</h1>
+    <div class="main-container">
+        <section class="cart">
+            <div class="cart-container">
+                <table class="tabla">
+                    <thead class="tabla-header">
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio Unitario</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tabla-body">
+                        <tr>
+                            <td class="producto">
+                                <div class="product-info">
+                                    <img class="product-img" src="images/Guitarra1.jpg">
+                                    <div class="product-name">
+                                        <p><a class="remove-button" href="">Slash Signature Les Paul</a></p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="price-unitario">$2.999</td>
+                            <td class="input">
+                                <div>
+                                    <span class="cantidad-menos"><i class="fa-solid fa-minus"></i></span>
+                                    <input type="text" value="1">
+                                    <span class="cantidad-mas"><i class="fa-solid fa-plus"></i></span>
+                                </div>
+                            </td>
+                            <td class="price-total">$2.999</td>
+                            <td class="eliminar">
+                                <a class="remove-button" href=""><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="cart-total">
+            <div class="supremo-2">
+                <h2 class="cart-total-h2">Resumen de compra</h2>
+                <div class="cupones">              
+                    <span class="texto-cupon">Si tenes un código de descuento ingresalo acá</span>
+                    <div class="insertar-cupon">
+                        <input class="input-cupon" type="text" id="cupon" placeholder="Código">
+                        <button type="submit" class="boton1">Aplicar</button>
+                    </div>
+                </div>
+                <div class="tabla-total">
+                    <table class="total-tabla-align">
+                        <tr>
+                            <td>Subtotal:</td>
+                            <td class="respuesta-tabla-total">$4.498</td>
+                        </tr>
+                        <tr>
+                            <td>Envio:</td>
+                            <td class="respuesta-tabla-total">Gratis</td>
+                        </tr>
+                        <tr>
+                            <td>Descuento:</td>
+                            <td class="respuesta-tabla-total">$0</td>
+                        </tr>
+                        <tr>
+                            <td class="grandota">Total:</td>
+                            <td class="grandota respuesta-tabla-total">$4.498</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="product-comprar">
+                    <button type="button">Comprar ahora</button>
+                </div>
+                <div class="seguir-comprando">
+                    <a href="/"><i class="fa-solid fa-angle-left"></i>Seguir comprando</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section>
+        <div class="container-mastercard">
+            <img class="mastercard" src="images/mastercard.png">
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@300;400;600;700;900&display=swap');
+
+body {
+    font-family: 'Montserrat', 'Nunito', sans-serif;
+    background-color: white;
+    color: #47525E;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 450px;
+    width: 100%;
+    margin: 10vh auto 0;
+    background-color: rgb(233, 233, 233);
+    border-radius: 64px;
+}
+
+.main-container {
+    padding: 30px;
+    width: 90%;
+}
+
+.logo-user {
+    text-align: center;
+}
+
+.fa-regular.fa-circle-user {
+    font-size: 110px;
+    color: #47525E;
+}
+
+.register-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.register-login a {
+    color: #47525E;
+    text-decoration: none;
+}
+
+.login-title {
+    background-color: white;
+    font-size: 32px;
+    margin: 0;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 18px;
+}
+
+.register-title {
+  margin: 0 10px;
+  font-size: 22px;
+  opacity: 0.5;
+}
+
+form {
+    padding: 20px;
+    text-align: center;
+    border-radius: 70px;
+}
+
+form div {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto 20px;
+}
+
+form div label {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+form div input {
+  height: 40px;
+    padding: 0 5px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    font-family: 'Montserrat', 'Nunito', sans-serif;
+}
+
+form div input::placeholder {
+    font-family: 'Montserrat', 'Nunito', sans-serif;
+    opacity: 0.5;
+}
+
+.cuentas-externas{
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.select-cuenta-externa {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.select-cuenta-externa a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  height: 40px;
+  background-color: white;
+  border-radius: 6px;
+  color: #47525E;
+  text-decoration: none;
+}
+
+.select-cuenta-externa img{
+  width: 30px;
+  height: auto;
+  margin-left: 10px;
+}
+
+.select-cuenta-externa p {
+  margin-left: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.boton-submit {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #47525E;
+    font-weight: bold;
+    height: 44px;
+    margin: 25px 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 100ms linear;
+}
+
+.boton-submit:hover {
+    background-color: #38414b;
+}
+
+.boton-submit button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.boton-submit:active {
+    transform: scale(0.98);
+}
+
+.container-signin{
+    margin: 0 auto;
+}
+
+.container-signin p{
+    text-align: center;
+    margin: 20px 0 0;
+    font-weight: 500;
+}

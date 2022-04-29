@@ -1,238 +1,212 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@100;200;300;400;600;700;800;900&display=swap');
 
 * {
     box-sizing: border-box;
-}
-
-body {
     margin: 0 auto;
-    font-family: 'Nunito', sans-serif;
-    background-color: #f1f1f1;
-}
-
-header {
-    background-color: white;
+    font-family: 'Montserrat', 'Nunito', sans-serif;
+  }
+  
+  body {
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* HEADER */
+  header {
     width: 100%;
-    border-top: 2px solid transparent;
-    border-bottom: 2px solid #c8c8c8;
-}
-
-/* MIN-WIDTH: 1280px */
+    border-bottom: 1px solid #cfcfcf;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 56px;
+    font-size: 24px;
+    color: #47525E;
+  }
+  
+  /* HEADER MENU MOBILE */
+  .menu-display-mobile {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+  
+  #menuToggle {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 0px 5px;
+  }
+  
+  #menuToggle input {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+  }
+  
+  #menuToggle span {
+    display: flex;
+    width: 24px;
+    height: 3px;
+    background: #47525E;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 5px 0px;
+    transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      opacity 0.50s ease;
+  }
+  
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+  
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 0%;
+  }
+  
+  #menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg);
+    background: #47525E;
+  }
+  
+  #menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  
+  #menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg);
+  }
+  
+  #primer-span {
+    margin-bottom: 4px;
+  }
+  
+  #segundo-span {
+    margin-bottom: 4px;
+  }
+  
+  
+  #tercer-span {
+    margin: 0;
+  }
+  
+  #menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    background-color: #F5F6FA;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
+  
+  #menu li {
+    padding: 0;
+    margin-left: 20px;
+    transition-delay: 2s;
+    list-style-type: none;
+  }
+  
+  #menuToggle input:checked~ul {
+    transform: none;
+  }
+  
+  /* HEADER BARRA DE BUSQUEDA MOBILE */
+  .searchbar {
+    padding: 0px 5px;
+  }
+  
+  .searchbar-div {
+    display: flex;
+    align-items: center;
+  }
+  
+  #searchbar-input {
+    display: none;
+    outline: none;
+    border: none;
+  }
+  
+  .searchbar input {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    display: block;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+  }
+  
+  .searchbar-button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1em;
+    height: 24px;
+    width: 24px;
+    color: #47525E;
+  }
+  
+  /* HEADER LOGO */
+  .nav-logo {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    font-size: 2em;
+  }
+  
+  .nav-logo-link {
+    cursor: pointer;
+  }
+  
+  /* CARRITO Y CUENTA ICONOS */
+  .nav-cart {
+    padding: 0 5px;
+  }
+  
+  .nav-account {
+    padding: 0 5px;
+  }
+  
+  .nav-account-cart {
+    font-size: 1em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #47525E;
+    width: 27px;
+    height: 24px;
+  }
+  
+  /* DISPLAY DE GUITARRAS OCULTOS */
+  .nav-categories {
+    display: none;
+  }
 
 @media (min-width: 1280px) {
-    /* HEADER */
-    .navbar {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 1340px;
-        width: 90%;
-        position: relative;
-        margin: 0 auto;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .navbar-menu-icon {
-        display: none;
-    }
-
-    .navbar-logo-leftmenu {
-        display: inline-block;
-        width: 10%;
-    }
-
-    .navbar-logo-leftmenu a {
-        display: flex;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .navbar-logo-leftmenu a img {
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .searchbar-div {
-        display: flex;
-        width: 40%;
-        max-height: 80%;
-        height: 32px;
-        justify-content: center;
-        border: 2px solid #ebebeb;
-        border-radius: 24px;
-    }
-
-    .searchbar-div:hover {
-        background-color: #ebebeb;
-        border: 2px solid transparent;
-        box-shadow: 0 0 4px 0px #171717;
-    }
-
-    .searchbar-button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 10%;
-        font-size: 20px;
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-        color: #464646;
-        padding: 0;
-        border-left: 1px solid #dedede;
-    }
-
-    #searchbar {
-        font-size: 16px;
-        width: 90%;
-        background-color: transparent;
-        border: none;
-        border-radius: 50px;
-        outline: none;
-    }
-
-    #searchbar[type='text'] {
-        font-family: 'Nunito', sans-serif;
-        font-weight: bold;
-    }
-
-    .navbar-account-cart {
-        width: 10%;
-        display: flex;
-        text-align: center;
-        justify-content: space-around;
-        align-items: center;
-        font-size: 2vw;
-    }
-
-    .navbar-account-cart-link {
-        display: flex;
-        height: 100%;
-        align-items: center;
-        border-bottom: 2px solid transparent;
-        cursor: pointer;
-        transition: color 100ms linear;
-        color: #464646;
-    }
-
-    .navbar-account-cart-link:hover {
-        color: red;
-    }
-
-    .navbar-categories {
-        width: 100%;
-    }
-
-    .navbar-categories-list {
-        display: flex;
-        padding: 0;
-        margin: 0 auto;
-        height: 100%;
-        list-style-type: none;
-        justify-content: center;
-    }
-
-    .navbar-categories-list li {
-        display: flex;
-        align-items: center;
-        font-size: 1em;
-        padding: 1vh 0.8vw;
-        height: 100%;
-        border-bottom: 2px solid transparent;
-        transition: border-bottom 300ms ease;
-    }
-
-    .navbar-categories-link {
-        color: #464646;
-        text-decoration: none;
-        width: 100%;
-        align-items: center;
-        cursor: pointer;
-    }
-
-    .navbar-categories-list li:hover {
-        border-bottom: 2px solid red;
-    }
-
-    .navbar-categories-list li:hover>a {
-        color: red;
-    }
-
-    .navbar-categories li i {
-        font-size: 0.8em;
-        text-align: center;
-        margin-left: 5px;
-        height: 13px;
-        transition: all 150ms ease;
-    }
-
-    .navbar-categories li:hover a>i {
-        transform: rotate(90deg);
-    }
-
-    /* DISPLAY DE GUITARRAS */
-
-    .navbar-categories-display {
-        position: absolute;
-        display: none;
-        font-size: 14px;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: white;
-        width: 100%;
-        height: 230px;
-        box-shadow: 0 20px 30px 0px rgb(0 0 0 / 30%);
-        margin: 0 auto;
-        border-radius: 0px 0px 70px 70px;
-        border-top: 2px solid #c8c8c8;
-    }
-
-    .navbar-categories-list li:hover>.navbar-categories-display {
-        display: flex;
-        align-items: center;
-    }
-
-    .navbar-menu-display-electricas {
-        width: 100%;
-        height: 90%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .navbar-menu-display-electricas a {
-        display: flex;
-        flex-direction: column;
-        width: 13%;
-        height: 100%;
-        text-decoration: none;
-        justify-content: space-around;
-        align-items: center;
-        font-size: 16px;
-        font-weight: bold;
-        color: black;
-        border: 2px solid #cdcdcd;
-        border-radius: 40px;
-        overflow: hidden;
-        margin: 0px 10px;
-        transition: border 200ms linear;
-        transition: color 50ms linear;
-    }
-
-    .navbar-menu-display-electricas a:hover {
-        border: 2px solid red;
-        color: red;
-    }
-
-    .display-image-guitar {
-        width: 90%;
-    }
-
-    .display-nombre-guitarra {
-        font-size: 100%;
-    }
-
     /* GUITARRAS DESTACADAS Y ULTIMOS INGRESOS */
 
     .populares {
@@ -300,140 +274,6 @@ header {
 /* MAX-WIDTH: 1279px */
 
 @media (min-width: 0px) and (max-width: 1279px) {
-
-    /* HEADER */
-    header {
-        position: relative;
-        width: 100%;
-    }
-
-    .navbar {
-        display: flex;
-        width: 90%;
-        flex-wrap: wrap;
-        margin: 0 auto;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .navbar-logo-leftmenu {
-        display: flex;
-        align-items: center;
-        width: 15%;
-    }
-
-    .navbar-menu-icon {
-        height: 90%;
-        display: flex;
-        align-items: center;
-        margin-right: 10px;
-    }
-
-    #button-display-enter {
-        display: flex;
-        align-items: center;
-        background-color: transparent;
-        border: 0px;
-        width: 100%;
-        padding: 0;
-        cursor: pointer;
-    }
-
-    .fas.fa-bars {
-        height: 100%;
-        font-size: 3.5vh;
-        color: #464646;
-        transition: color 200ms linear;
-    }
-
-    .navbar-menu-tablet {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-image: linear-gradient(90deg, #FFF 50%, rgba(255, 255, 255, 0.4) 50%);
-    }
-
-    .navbar-menu-tablet-categories {
-        color: #464646;
-    }
-
-    .navbar-menu-icon button:focus~.navbar-menu-tablet {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .navbar-logo-leftmenu a {
-        display: flex;
-        height: 90%;
-        align-items: center;
-    }
-
-    .navbar-logo-leftmenu a img {
-        width: 100%;
-    }
-
-    .navbar-categories {
-        display: none;
-    }
-
-    .searchbar-div {
-        display: flex;
-        width: 50%;
-        max-height: 80%;
-        height: 32px;
-        justify-content: center;
-        border: 2px solid #ebebeb;
-        border-radius: 24px;
-    }
-
-    .searchbar-div:hover {
-        background-color: #ebebeb;
-        border: 2px solid transparent;
-        box-shadow: 0 0 4px 0px #171717;
-    }
-
-    .searchbar-button {
-        width: 10%;
-        font-size: 20px;
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-        color: #464646;
-        border-left: 1px solid #dedede;
-    }
-
-    #searchbar {
-        font-size: 16px;
-        width: 90%;
-        background-color: transparent;
-        border: none;
-        border-radius: 50px;
-        outline: none;
-    }
-
-    #searchbar[type='text'] {
-        font-family: 'Nunito', sans-serif;
-        font-weight: bold;
-    }
-
-    .navbar-account-cart {
-        width: 10%;
-        height: 100%;
-        display: flex;
-        text-align: center;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 3.5vh;
-    }
-
-    .navbar-account-cart-link {
-        cursor: pointer;
-        color: #464646;
-    }
-
     /* GUITARRAS DESTACADAS Y ULTIMOS INGRESOS */
 
     .populares {
@@ -571,42 +411,7 @@ header {
 /* MAX-WIDTH: 768px */
 
 @media (min-width: 0px) and (max-width: 768px){
-    /* HEADER */
-    .navbar{
-        margin-bottom: 20px;
-        justify-content: center;
-        margin: 0 auto;
-    }
-
-    .navbar-logo-leftmenu {
-        display: flex;
-        align-items: center;
-        width: 50%;
-    }
-
-    .navbar-logo-leftmenu a img{
-        width: 20vw;
-    }
-
-    .searchbar-div{
-        width: 50%;
-    }
-    .navbar-account-cart{
-        width: auto;
-        height: auto;
-        align-self: center;
-    }
-
-    .navbar-account-cart-link{
-        margin: 10px;
-    }
-
-    .navbar-menu-tablet {
-        background-image: linear-gradient(90deg, #FFF 100%, rgba(255, 255, 255, 0.4) 0%);
-    }
-
     /* CARROUSEL */
-
     .main-carrousel{
         display: none;
     }
