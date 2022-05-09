@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('../partials/head') %> 
+    <link href="css/loginStyle.css" rel="stylesheet">
+    <title>Login</title>
+</head>
+
+<body>
+    <section>
+        <div class="main-container">
+            <div class="logo-user">
+                <i class="fa-solid fa-bandage"></i>
+            </div>
+            <div class="register-login">
+                <a href="/login">
+                    <h2 class="login-title">Ingresar</h2>
+                </a>
+                <a href="/register">
+                    <h2 class="register-title">Registrarse</h2>
+                </a>
+            </div>
+            <form action="./registrarse.html" method="Get">
+                <div class="usuario">
+                    <label for="usuario">Usuario o e-mail</label>
+                    <input type="text" placeholder="Usuario o e-mail" name="usuario" required>
+                </div>
+                <div class="password">
+                    <label for="password">Contraseña</label>
+                    <input type="password" placeholder="Contraseña" name="password" required>
+                </div>
+                <div class="boton-submit">
+                    <button type="submit">Iniciar sesión</button>
+                </div>
+            </form>
+            <div class="cuentas-externas">
+                <div class="select-cuenta-externa">
+                    <a href="">
+                    <img src="images/google-icon.svg">
+                    <p>CONTINUAR CON GOOGLE</p>
+                    </a>
+                </div>
+                <div class="select-cuenta-externa">
+                    <a href="">
+                        <img src="images/facebook-icon.svg">
+                        <p>CONTINUAR CON FACEBOOK</p>
+                    </a>
+                </div>
+            </div>
+            <div class="container-signin">
+                <p>¿No tienes una cuenta? <a href="./register">Registrarse</a>.</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

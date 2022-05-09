@@ -1,120 +1,219 @@
 <header>
-    <nav role="navigation" class="navbar">
-        <div id="menuToggle">
-            <input type="checkbox">
-            <span id="primer-span"></span>
-            <span id="segundo-span"></span>
-            <span id="tercer-span"></span>
-            <ul id="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Info</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-        <div class="searchbar">
-            <input type="checkbox">
-            <button class="searchbar-button" type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <div class="searchbar-div">
-                <input type="text" name="searchbar" id="searchbar-input">
-            </div>
-        </div>
-        <div class="nav-logo">
-            <a class="nav-logo-link">
-                <i class="fa-solid fa-bandage"></i>
-            </a>
-        </div>
-        <div class="nav-cart">
-            <button type="button" class="nav-account-cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </button>
-        </div>
-        <div class="nav-account">
-            <button type="button" class="nav-account-cart">
-                <i class="fa-solid fa-user"></i>
-            </button>
-        </div>
-        <div class="nav-categories">
-            <ul class="nav-categories-list">
-                <li id="nav-electricas">
-                    <a href="/" class="nav-categories-link">
-                        Eléctricas<i class="fa-solid fa-angle-down"></i>
-                    </a>
-                    <div class="nav-categories-display">
-                        <div class="nav-menu-display-electricas">
-                            <a href="/" class="display-image-link">
-                                <img src="images/guitarras/strato.png" alt="Stratocaster" class="display-image-guitar">
-                                <div class="display-nombre-guitarra">Stratocaster</div>
-                            </a>
-                            <a href="/" class="display-image-link">
-                                <img src="images/guitarras/telecaster.png" alt="Telecaster"
-                                    class="display-image-guitar">
-                                <div class="display-nombre-guitarra">Telecaster</div>
-                            </a>
-                            <a href="/" class="display-image-link">
-                                <img src="images/guitarras/lespaul.png" alt="Les Paul" class="display-image-guitar">
-                                <div class="display-nombre-guitarra">Les Paul</div>
-                            </a>
-                            <a href="/" class="display-image-link">
-                                <img src="images/guitarras/prs.png" alt="Paul Reed Smith" class="display-image-guitar">
-                                <div class="display-nombre-guitarra">Paul Reed Smith</div>
-                            </a>
-                            <a href="/" class="display-image-link">
-                                <img src="images/guitarras/superstrat.png" alt="Superstrat"
-                                    class="display-image-guitar">
-                                <div class="display-nombre-guitarra">Superstrat</div>
-                            </a>
-                            <a href="/" class="display-image-link">
-                                <img src="images/guitarras/sg.png" alt="SG" class="display-image-guitar">
-                                <div class="display-nombre-guitarra">Solid Guitar</div>
-                            </a>
-                        </div>
+    <div id="menuToggle">
+        <input type="checkbox">
+        <span id="primer-span"></span>
+        <span id="segundo-span"></span>
+        <span id="tercer-span"></span>
+        <ul id="menu-mobile">
+            <li id="nav-electricas-mobile">
+                <a href="/" class="nav-categories-link">
+                    Eléctricas<i class="fa-solid fa-angle-right"></i>
+                </a>
+            <li id="nav-actusticas-mobile">
+                <a href="/" class="nav-categories-link">
+                    Acústicas<i class="fa-solid fa-angle-right"></i>
+                </a>
+            </li>
+            <li id="nav-bajos-mobile">
+                <a href="/" class="nav-categories-link">
+                    Bajos<i class="fa-solid fa-angle-right"></i>
+                </a>
+            </li>
+            <li id="nav-amplificacion-mobile">
+                <a href="/" class="nav-categories-link">
+                    Amplificación<i class="fa-solid fa-angle-right"></i>
+                </a>
+            </li>
+            <li id="nav-accesorios-mobile">
+                <a href="/" class="nav-categories-link">
+                    Accesorios<i class="fa-solid fa-angle-right"></i>
+                </a>
+            </li>
+            <li id="nav-repuestos-mobile">
+                <a href="/" class="nav-categories-link">
+                    Repuestos<i class="fa-solid fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="nav-logo">
+        <a class="nav-logo-link" href="/">
+            <i class="fa-solid fa-bandage"></i>
+        </a>
+    </div>
+    <div class="nav-categories">
+        <ul class="categories-list">
+            <li class="nav-electricas">
+                <a href="/detalle">
+                    Eléctricas <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <div class="nav-categories-display">
+                    <div class="nav-menu-display-electricas">
+                        <a href="" class="display-guitar">
+                            <div>
+                                <img src="images/guitarras/electricas-display/strato.png">
+                                <div class="display-guitar-name">Stratocaster</div>
+                            </div>
+                        </a>
+                        <a href="" class="display-guitar">
+                            <div>
+                                <img src="images/guitarras/electricas-display/telecaster.png">
+                                <div class="display-guitar-name">Telecaster</div>
+                            </div>
+                        </a>
+                        <a href="" class="display-guitar">
+                            <div>
+                                <img src="images/guitarras/electricas-display/prs.png">
+                                <div class="display-guitar-name">Paul Reed Smith</div>
+                            </div>
+                        </a>
+                        <a href="" class="display-guitar">
+                            <div>
+                                <img src="images/guitarras/electricas-display/sg.png">
+                                <div class="display-guitar-name">Solid Guitar</div>
+                            </div>
+                        </a>
+                        <a href="" class="display-guitar">
+                            <div>
+
+                                <img src="images/guitarras/electricas-display/lespaul.png">
+                                <div class="display-guitar-name">Les Paul</div>
+                            </div>
+                        </a>
+                        <a href="" class="display-guitar">
+                            <div>
+                                <img src="images/guitarras/electricas-display/superstrat.png">
+                                <div class="display-guitar-name">Superstrat</div>
+                            </div>
+                        </a>
                     </div>
-                </li>
-                <li id="nav-actusticas">
-                    <a href="/" class="nav-categories-link">
-                        Acústicas<i class="fa-solid fa-angle-down"></i>
-                    </a>
-                    <div class="nav-categories-display">
-                        <div class="nav-menu-display-acusticas"></div>
+                </div>
+            </li>
+            <li class="nav-acusticas">
+                <a href="/">
+                    Acústicas <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <div class="nav-categories-display">
+                    <div class="nav-menu-display-acusticas">
+                        <a href="" class="display-guitar">
+                            <div>
+                                <img src="images/guitarras/electricas-display/strato.png">
+                                <div class="display-guitar-name">Stratocaster</div>
+                            </div>
+                        </a>
+                        <a href="" class="display-guitar">
+                            <div>
+                                <img src="images/guitarras/electricas-display/telecaster.png">
+                                <div class="display-guitar-name">Telecaster</div>
+                            </div>
+                        </a>
+                        <a href="" class="display-guitar">
+                            <div>
+                                <img src="images/guitarras/electricas-display/prs.png">
+                                <div class="display-guitar-name">Paul Reed Smith</div>
+                            </div>
+                        </a>
+                        <a href="" class="display-guitar">
+                            <div>
+                                <img src="images/guitarras/electricas-display/sg.png">
+                                <div class="display-guitar-name">Solid Guitar</div>
+                            </div>
+                        </a>
+                        <a href="" class="display-guitar">
+                            <div>
+
+                                <img src="images/guitarras/electricas-display/lespaul.png">
+                                <div class="display-guitar-name">Les Paul</div>
+                            </div>
+                        </a>
+                        <a href="" class="display-guitar">
+                            <div>
+                                <img src="images/guitarras/electricas-display/superstrat.png">
+                                <div class="display-guitar-name">Superstrat</div>
+                            </div>
+                        </a>
                     </div>
-                </li>
-                <li id="nav-bajos">
-                    <a href="/" class="nav-categories-link">
-                        Bajos<i class="fa-solid fa-angle-down"></i>
-                    </a>
-                    <div class="nav-categories-display">
-                        <div class="nav-menu-display-bajoss"></div>
+                </div>
+            </li>
+            <li class="nav-bajos">
+                <a href="/">
+                    Bajos <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <div class="nav-categories-display">
+                    <div class="nav-menu-display-bajos">
+                        <a href="" class="display-guitar">
+                            <div>
+                                <img src="images/guitarras/bajos-display/bajo1.png">
+                                <div class="display-guitar-name">Precision</div>
+                            </div>
+                        </a>
+                        <a href="" class="display-guitar">
+                            <div>
+                                <img src="images/guitarras/bajos-display/bajo2.png">
+                                <div class="display-guitar-name">Jazz</div>
+                            </div>
+                        </a>
+                        <a href="" class="display-guitar">
+                            <div>
+                                <img src="images/guitarras/bajos-display/bajo3.png">
+                                <div class="display-guitar-name">Jaguar</div>
+                            </div>
+                        </a>
+                        <a href="" class="display-guitar">
+                            <div>
+                                <img src="images/guitarras/bajos-display/bajo4.png">
+                                <div class="display-guitar-name">Mustang</div>
+                            </div>
+                        </a>
+                        <a href="" class="display-guitar">
+                            <div>
+
+                                <img src="images/guitarras/bajos-display/bajo5.png">
+                                <div class="display-guitar-name">Squier</div>
+                            </div>
+                        </a>
                     </div>
-                </li>
-                <li id="nav-amplificacion">
-                    <a href="/" class="nav-categories-link">
-                        Amplificación<i class="fa-solid fa-angle-down"></i>
-                    </a>
-                    <div class="nav-categories-display">
-                        <div class="nav-menu-display-amplificacion"></div>
-                    </div>
-                </li>
-                <li id="nav-accesorios">
-                    <a href="/" class="nav-categories-link">
-                        Accesorios<i class="fa-solid fa-angle-down"></i>
-                    </a>
-                    <div class="nav-categories-display">
-                        <div class="nav-menu-display-accesorios"></div>
-                    </div>
-                </li>
-                <li id="nav-repuestos">
-                    <a href="/" class="nav-categories-link">
-                        Repuestos<i class="fa-solid fa-angle-down"></i>
-                    </a>
-                    <div class="nav-categories-display">
-                        <div class="nav-menu-display-repuestos"></div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        </div>
-    </nav>
+                </div>
+            </li>
+            <li class="nav-amplificacion">
+                <a href="/">
+                    Amplificación <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <div class="nav-categories-display">
+                    <div class="nav-menu-display-amplificacion"></div>
+                </div>
+            </li>
+            <li class="nav-accesorios">
+                <a href="/">
+                    Accesorios <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <div class="nav-categories-display">
+                    <div class="nav-menu-display-accesorios"></div>
+                </div>
+            </li>
+            <li class="nav-repuestos">
+                <a href="/">
+                    Repuestos <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <div class="nav-categories-display">
+                    <div class="nav-menu-display-repuestos"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="searchbar">
+        <a>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+    </div>
+    <div class="nav-cart">
+        <a href="/carrito">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+    </div>
+    <div class="nav-account">
+        <a href="/login">
+            <i class="fa-solid fa-user"></i>
+        </a>
+    </div>
 </header>

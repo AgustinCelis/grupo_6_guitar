@@ -1,11 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;900&family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: 'Readex Pro', sans-serif;
+  }
+  
 body {
-    font-family: 'Montserrat', 'Nunito', sans-serif;
-    background-color: white;
-    color: #47525E;
+    background-color:white;
     display: flex;
     flex-direction: column;
+    color: #47525E;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 section {
@@ -15,22 +23,20 @@ section {
     justify-content: center;
     max-width: 450px;
     width: 100%;
-    margin: 10vh auto 0;
     background-color: rgb(233, 233, 233);
     border-radius: 64px;
 }
 
 .main-container {
-    padding: 30px;
-    width: 90%;
+    padding: 40px;
 }
 
 .logo-user {
     text-align: center;
 }
 
-.fa-regular.fa-circle-user {
-    font-size: 110px;
+.logo-user i {
+    font-size: 50px;
     color: #47525E;
 }
 
@@ -62,9 +68,7 @@ section {
 }
 
 form {
-    padding: 20px;
     text-align: center;
-    border-radius: 70px;
 }
 
 form div {
@@ -78,6 +82,7 @@ form div {
 form div label {
     font-size: 18px;
     font-weight: 700;
+    width: 100%;
 }
 
 form div input {
@@ -87,6 +92,7 @@ form div input {
     border-radius: 6px;
     outline: none;
     font-family: 'Montserrat', 'Nunito', sans-serif;
+    width: 100%;
 }
 
 form div input::placeholder {
@@ -99,11 +105,20 @@ form div input::placeholder {
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    width: 90%;
 }
 
 .terminos-condiciones label{
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
+    flex-grow: 1;
+    flex-basis: 85%;
+}
+.terminos-condiciones input{
+    flex-basis: 15%;
+    height: auto;
+    border: 0px solid transparent;
+    outline: none;
 }
 
 .boton-submit {

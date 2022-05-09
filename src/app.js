@@ -1,5 +1,12 @@
 const express = require('express');
 const path = require('path');
+const rutaHome = require('./routes/home');
+const rutaDetail = require('./routes/detail');
+const rutaCart = require('./routes/cart');
+const rutaLogin = require('./routes/login');
+const rutaRegister = require('./routes/register');
+const rutaProductCreate = require('./routes/productCreate');
+const rutaProductEdit = require('./routes/productEdit');
 
 const app = express();
 
@@ -10,25 +17,23 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
 app.listen(4000, () =>{
-    console.log('Server on port 4000')
-})
+    console.log('Server on port 4000');
+});
 
-app.get('/', (req, res) =>{
-    res.render('home.ejs');
-})
+app.use('/', rutaHome)
 
-app.get('/detalle', (req, res) =>{
-    res.render('detail.ejs')
-})
+app.use('/', rutaDetail);
 
-app.get('/carrito', (req, res) =>{
-    res.render('cart.ejs')
-})
+app.use('/', rutaCart);
 
-app.get('/login', (req, res) =>{
-    res.status(200).sendFile(path.join(__dirname, 'views/login.html'))
-})
+app.use('/', rutaLogin);
 
-app.get('/register', (req, res) =>{
-    res.status(200).sendFile(path.join(__dirname, 'views/register.html'))
-})
+app.use('/', rutaRegister);
+
+app.use('/', rutaProductCreate);
+
+app.use('/', rutaProductEdit);
+
+app.use((req, res, next)=>{
+    res.status(404).send('not-found');
+});

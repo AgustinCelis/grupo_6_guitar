@@ -1,11 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;900&family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: 'Readex Pro', sans-serif;
+}
 
 body {
-    font-family: 'Montserrat', 'Nunito', sans-serif;
     background-color: white;
-    color: #47525E;
     display: flex;
     flex-direction: column;
+    color: #47525E;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 section {
@@ -15,22 +23,20 @@ section {
     justify-content: center;
     max-width: 450px;
     width: 100%;
-    margin: 10vh auto 0;
     background-color: rgb(233, 233, 233);
     border-radius: 64px;
 }
 
 .main-container {
-    padding: 30px;
-    width: 90%;
+    padding: 40px;
 }
 
 .logo-user {
     text-align: center;
 }
 
-.fa-regular.fa-circle-user {
-    font-size: 110px;
+.logo-user i {
+    font-size: 50px;
     color: #47525E;
 }
 
@@ -56,13 +62,12 @@ section {
 }
 
 .register-title {
-  margin: 0 10px;
-  font-size: 22px;
-  opacity: 0.5;
+    margin: 0 10px;
+    font-size: 22px;
+    opacity: 0.5;
 }
 
 form {
-    padding: 20px;
     text-align: center;
     border-radius: 70px;
 }
@@ -78,15 +83,17 @@ form div {
 form div label {
     font-size: 18px;
     font-weight: 700;
+    width: 100%;
 }
 
 form div input {
-  height: 40px;
+    height: 40px;
     padding: 0 5px;
     border: none;
     border-radius: 6px;
     outline: none;
     font-family: 'Montserrat', 'Nunito', sans-serif;
+    width: 100%;
 }
 
 form div input::placeholder {
@@ -94,43 +101,45 @@ form div input::placeholder {
     opacity: 0.5;
 }
 
-.cuentas-externas{
-  display: flex;
-  width: 90%;
-  flex-direction: column;
-  margin: 0 auto;
-  align-items: center;
+.cuentas-externas {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
 }
+
 
 .select-cuenta-externa {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
-.select-cuenta-externa a{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 80%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  color: #47525E;
-  text-decoration: none;
+.select-cuenta-externa a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 85%;
+    height: 40px;
+    background-color: white;
+    border-radius: 6px;
+    color: #47525E;
+    text-decoration: none;
 }
 
-.select-cuenta-externa img{
-  width: 30px;
-  height: auto;
-  margin-left: 10px;
+.select-cuenta-externa img {
+    width: 32px;
+    height: auto;
+    margin: 0 15px;
 }
 
 .select-cuenta-externa p {
-  margin-left: 20px;
-  font-size: 12px;
-  font-weight: 700;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left;
 }
 
 .boton-submit {
@@ -140,7 +149,7 @@ form div input::placeholder {
     background-color: #47525E;
     font-weight: bold;
     height: 44px;
-    margin: 25px 0 10px;
+    margin: 25px 0;
     border-radius: 5px;
     cursor: pointer;
     transition: all 100ms linear;
@@ -166,11 +175,11 @@ form div input::placeholder {
     transform: scale(0.98);
 }
 
-.container-signin{
+.container-signin {
     margin: 0 auto;
 }
 
-.container-signin p{
+.container-signin p {
     text-align: center;
     margin: 20px 0 0;
     font-weight: 500;

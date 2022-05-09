@@ -1,436 +1,252 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@100;200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;900&family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 
 * {
-    box-sizing: border-box;
-    margin: 0 auto;
-    font-family: 'Montserrat', 'Nunito', sans-serif;
-  }
-  
-  body {
-    background-color:white;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* HEADER */
-  header {
-    width: 100%;
-    border-bottom: 1px solid #cfcfcf;
-    position: relative;
-    z-index: 1000;
-  }
-  
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 95%;
-    height: 56px;
-    font-size: 24px;
-    color: #47525E;
-  }
-  
-  /* HEADER MENU MOBILE */
-  .menu-display-mobile {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-  }
-  
-  #menuToggle {
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-    -webkit-user-select: none;
-    user-select: none;
-    padding: 0px 5px;
-  }
-  
-  #menuToggle input {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 2;
-  }
-  
-  #menuToggle span {
-    display: flex;
-    width: 24px;
-    height: 3px;
-    background: #47525E;
-    border-radius: 3px;
-    z-index: 1;
-    transform-origin: 5px 0px;
-    transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-      opacity 0.50s ease;
-  }
-  
-  #menuToggle span:first-child {
-    transform-origin: 0% 0%;
-  }
-  
-  #menuToggle span:nth-last-child(2) {
-    transform-origin: 0% 0%;
-  }
-  
-  #menuToggle input:checked~span {
-    opacity: 1;
-    transform: rotate(45deg);
-    background: #47525E;
-  }
-  
-  #menuToggle input:checked~span:nth-last-child(3) {
-    opacity: 0;
-    transform: rotate(0deg);
-  }
-  
-  #menuToggle input:checked~span:nth-last-child(2) {
-    transform: rotate(-45deg);
-  }
-  
-  #primer-span {
-    margin-bottom: 4px;
-  }
-  
-  #segundo-span {
-    margin-bottom: 4px;
-  }
-  
-  
-  #tercer-span {
-    margin: 0;
-  }
-  
-  #menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    -webkit-font-smoothing: antialiased;
-    background-color: #F5F6FA;
-    transform: translate(-100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-  }
-  
-  #menu li {
-    padding: 0;
-    margin-left: 20px;
-    transition-delay: 2s;
-    list-style-type: none;
-  }
-  
-  #menuToggle input:checked~ul {
-    transform: none;
-  }
-  
-  /* HEADER BARRA DE BUSQUEDA MOBILE */
-  .searchbar {
-    padding: 0px 5px;
-  }
-  
-  .searchbar-div {
-    display: flex;
-    align-items: center;
-  }
-  
-  #searchbar-input {
-    display: none;
-    outline: none;
-    border: none;
-  }
-  
-  .searchbar input {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    display: block;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 2;
-  }
-  
-  .searchbar-button {
-    display: flex;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    padding: 0;
-    cursor: pointer;
-    font-size: 1em;
-    height: 24px;
-    width: 24px;
-    color: #47525E;
-  }
-  
-  /* HEADER LOGO */
-  .nav-logo {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    font-size: 2em;
-  }
-  
-  .nav-logo-link {
-    cursor: pointer;
-  }
-  
-  /* CARRITO Y CUENTA ICONOS */
-  .nav-cart {
-    padding: 0 5px;
-  }
-  
-  .nav-account {
-    padding: 0 5px;
-  }
-  
-  .nav-account-cart {
-    font-size: 1em;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    color: #47525E;
-    width: 27px;
-    height: 24px;
-  }
-  
-  /* DISPLAY DE GUITARRAS OCULTOS */
-  .nav-categories {
-    display: none;
-  }
-
-@media (min-width: 1280px) {
-    /* GUITARRAS DESTACADAS Y ULTIMOS INGRESOS */
-
-    .populares {
-        width: 90%;
-        color: black;
-        margin: 0 auto;
-    }
-    
-    .populares-title {
-        font-size: 2.5em;
-        font-weight: bold;
-        width: 100%;
-        margin: 0 auto 6vh;
-    }
-    
-    .populares-guitarras {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: space-around;
-        margin: 0 auto 10vh;
-    }
-    
-    .populares-guitar-div {
-        max-width: 16%;
-        font-size: 18px;
-        font-weight: bold;
-        text-align: center;
-        border-radius: 20px;
-        transition: background-color, transform 200ms linear;
-        padding: 10px;
-    }
-
-    .populares-guitar-div:hover {
-        transform: scale(1.1);
-        background-color: #ffffff5d;
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        opacity: 1;
-    }
-    
-    .popular-guitar-link {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        cursor: pointer;
-        text-decoration: none;
-        color: black;
-        font-size: 1em;
-    }
-    
-    .popular-guitar-link img {
-        width: 100%;
-    }
-
-    .popular-guitar-price {
-        opacity: 0;
-        color: black;
-        transition: opacity 600ms ease;
-    }
-    .populares-guitar-div:hover a > .popular-guitar-price {
-        opacity: 1;
-    }
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: 'Readex Pro', sans-serif;
 }
 
-/* MAX-WIDTH: 1279px */
+body {
+  background-color:white;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1280px) {
+  
+  /* GUITARRAS DESTACADAS Y ULTIMOS INGRESOS */
+  .populares {
+    width: 90%;
+    color: #47525E;
+    margin: 0 auto;
+  }
+
+  .populares-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    width: 100%;
+    margin: 0 auto 6vh;
+    color: #47525E;
+  }
+
+  .populares-guitarras {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto 10vh;
+  }
+
+  .populares-guitar-div {
+    max-width: 16%;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 20px;
+    transition: background-color, transform 200ms linear;
+    padding: 10px;
+  }
+
+  .populares-guitar-div:hover {
+    transform: scale(1.1);
+    background-color: #ffffff5d;
+    box-shadow: 0px 0px 8px rgb(100, 100, 100);
+    opacity: 1;
+  }
+
+  .popular-guitar-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #47525E;
+    font-size: 1em;
+  }
+
+  .popular-guitar-link img {
+    width: 100%;
+  }
+
+  .popular-guitar-price {
+    opacity: 0;
+    color: #47525E;
+    transition: opacity 600ms ease;
+  }
+
+  .populares-guitar-div:hover a>.popular-guitar-price {
+    opacity: 1;
+  }
+}
+
 
 @media (min-width: 0px) and (max-width: 1279px) {
-    /* GUITARRAS DESTACADAS Y ULTIMOS INGRESOS */
 
-    .populares {
-        width: 90%;
-        margin: 6vh auto;
-    }
-    
-    .populares-title {
-        font-size: 2.5em;
-        font-weight: bold;
-        width: 100%;
-        margin: 0 auto 8vh;
-        color: #464646;
-    }
-    
-    .populares-guitarras {
-        width: 90%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;
-        margin: 0 auto;
-    }
-    
-    .populares-guitar-div {
-        flex-basis: 14%;
-        margin-bottom: 7vh;
-    }
-    .popular-guitar-link{
-        display: flex;
-        flex-direction: column;
-        color: #464646;
-        text-decoration: none;
-        align-items: center;
-        text-align: center;
-        font-weight: bold;
-    }
+  /* GUITARRAS DESTACADAS Y ULTIMOS INGRESOS */
+  .populares {
+    width: 90%;
+    margin: 6vh auto;
+    color: #47525E;
+  }
 
-    .popular-guitar-link img{
-        width: 100%;
-    }
+  .populares-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    width: 100%;
+    margin: 0 auto 8vh;
+    color: #47525E;
+  }
 
-    .popular-guitar-price{
-        display: none;  
-    }
+  .populares-guitarras {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+
+  .populares-guitar-div {
+    flex-basis: 14%;
+    margin-bottom: 7vh;
+  }
+
+  .popular-guitar-link {
+    display: flex;
+    flex-direction: column;
+    color: #47525E;
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .popular-guitar-link img {
+    width: 100%;
+  }
+
+  .popular-guitar-price {
+    display: none;
+    color: #47525E;
+  }
 }
 
 /* CARROUSEL */
 
 .main-carrousel {
-    display: flex;
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 100%;
-    z-index: -1;
-    font-size: 16px;
+  position: relative;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+  font-size: 16px;
 }
 
 .main-carrousel img {
-    width: 100%;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .texto-banner {
-    display: flex;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 6vw;
-    text-align: right;
-    color: white;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 6vw;
+  text-align: right;
+  color: white;
 }
 
 .text-banner-titulo {
-    font-size: 1.5vw;
-    margin-bottom: 1vh;
+  font-size: 20px;
+  margin: 0;
+  text-align: right;
 }
 
 .nombre-guitarra-banner {
-    font-size: 5vw;
-    font-weight: bolder;
-    line-height: 1;
-    font-style: italic;
+  font-size: 72px;
+  font-weight: 900;
+  font-style: italic;
 }
 
 .carrousel-changer {
-    margin: 15px 0px;
-    background-color: transparent;
-    height: 3px;
-    width: 100%;
+  margin: 15px 0px;
+  background-color: transparent;
+  height: 3px;
+  width: 100%;
 }
 
 .carrousel-changer ul {
-    display: flex;
-    width: 20%;
-    height: 100%;
-    list-style-type: none;
-    margin: 0 auto;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  width: 20%;
+  height: 100%;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .carrousel-changer ul li {
-    display: block;
-    position: relative;
-    height: 100%;
-    width: 50px;
-    background-color: white;
-    margin: 0px 10px;
-    transition: background-color 500ms ease-in-out;
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 50px;
+  background-color: white;
+  margin: 0px 10px;
+  transition: background-color 500ms ease-in-out;
 }
 
 .carrousel-changer ul li button {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: transparent;
-    border: none;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .carrousel-changer ul li button:focus {
-    background-color: red;
+  background-color: red;
 }
 
 /* MAX-WIDTH: 768px */
 
-@media (min-width: 0px) and (max-width: 768px){
-    /* CARROUSEL */
-    .main-carrousel{
-        display: none;
-    }
-    .carrousel-changer{
-        display: none;
-    }
-    
-    /* GUITARRAS DESTACADAS Y ULTIMOS INGRESOS */
+@media (min-width: 0px) and (max-width: 768px) {
 
-    .populares-guitar-div {
-        flex-basis: 40%;
-        margin-bottom: 7vh;
-    }
+  /* CARROUSEL */
+  .main-carrousel {
+    display: none;
+  }
 
-    .populares-title{
-        font-size: 8vw;
-    }
+  .carrousel-changer {
+    display: none;
+  }
 
-    .popular-guitar-name{
-        font-size: 3.5vw;
-    }
+  /* GUITARRAS DESTACADAS Y ULTIMOS INGRESOS */
+
+  .populares-guitar-div {
+    flex-basis: 40%;
+    margin-bottom: 7vh;
+    color: #47525E;
+  }
+
+  .populares-title {
+    font-size: 8vw;
+  }
+
+  .popular-guitar-name {
+    font-size: 3.5vw;
+    color: #47525E;
+  }
 }

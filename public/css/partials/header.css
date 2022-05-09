@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;900&family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
+/* HEADER */
+header {
+    width: 100vw;
+    background-color: white;
+    border-bottom: 1px solid #cfcfcf;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    font-size: 24px;
+    color: #47525E;
+    position: relative;
+}
+
+
+/* HEADER MENU MOBILE */
+.menu-display-mobile {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+#menuToggle {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 0px 5px;
+}
+
+#menuToggle input {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+#menuToggle span {
+    display: flex;
+    width: 24px;
+    height: 3px;
+    background: #47525E;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 5px 0px;
+    transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.50s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg);
+    background-color: red;
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg);
+}
+
+#primer-span {
+    margin-bottom: 4px;
+}
+
+#segundo-span {
+    margin-bottom: 4px;
+}
+
+#tercer-span {
+    margin: 0;
+}
+
+#menu-mobile {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0;
+    -webkit-font-smoothing: antialiased;
+    background-color: #F5F6FA;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu-mobile li {
+    padding: 0;
+    margin-left: 20px;
+    transition-delay: 2s;
+    list-style-type: none;
+}
+
+#menuToggle input:checked~ul {
+    transform: none;
+}
+
+/* HEADER BARRA DE BUSQUEDA MOBILE */
+.searchbar {
+    padding: 0px 5px;
+}
+
+.searchbar a {
+    cursor: pointer;
+    color: #47525E;
+    transition: color 100ms linear;
+}
+
+.searchbar a:hover {
+    color: red;
+}
+
+
+/* HEADER LOGO */
+.nav-logo {
+    width: 50%;
+    height: 100%;
+}
+
+.nav-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 60px;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #47525E;
+}
+
+.nav-logo-link i {
+    font-size: 2em;
+    margin: 0;
+}
+
+/* CARRITO Y CUENTA ICONOS */
+.nav-cart {
+    padding: 0 5px;
+}
+
+.nav-cart a {
+    text-decoration: none;
+    color: #47525E;
+    transition: color 100ms linear;
+}
+
+.nav-cart a:hover {
+    color: red;
+}
+
+.nav-account {
+    display: none;
+}
+
+.nav-account a {
+    color: #47525E;
+    text-decoration: none;
+    transition: color 100ms linear;
+}
+
+.nav-account a:hover {
+    color: red;
+}
+
+.nav-account-cart {
+    font-size: 1em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #47525E;
+    width: 27px;
+    height: 24px;
+}
+
+/* CATEGORIA DE GUITARRAS OCULTAS */
+.nav-categories{
+    display: none;
+}
+
+@media (min-width: 769px) {
+    header {
+        width: 100%;
+        height: 60px;
+        justify-content: space-around;
+    }
+
+    main{
+        max-width: 1920px;
+        width: 100%;
+    }
+
+    .menuToggle{
+        order: 1;
+    }
+
+    .searchbar{
+        order: 2;
+        display: flex;
+        justify-content: center;
+        width: 60px;
+    }
+
+    .nav-logo{
+        order: 3;
+        display: flex;
+        justify-content: center;
+        width: 60px;
+    }
+
+    .nav-cart{
+        order: 4;
+        display: flex;
+        justify-content: center;
+        width: 60px;
+    }
+  
+    .nav-account {
+        order: 5;
+        display: flex;
+        justify-content: center;
+        width: 60px;
+    }
+}
+
+@media (min-width: 1280px) {
+    header {
+        height: 64px;
+        position: fixed;
+        font-size: 20px;
+    }
+
+    main {
+        margin-top: 64px;
+    }
+
+    header div {
+        margin: 0;
+    }
+
+    #menuToggle {
+        display: none;
+    }
+
+    .nav-logo {
+        order: 1;
+        display: flex;
+        justify-content: center;
+        width: 60px;
+    }
+
+    .nav-logo-link {
+        position: static;
+        width: 100%;
+    }
+
+    .searchbar {
+        order: 2;
+        font-size: 1.4em;
+    }
+
+    .nav-categories {
+        display: flex;
+        order: 3;
+        align-self: flex-end;
+        width: 60%;
+        height: 100%;
+    }
+
+    .categories-list {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    .categories-list li {
+        display: flex;
+        align-items: flex-end;
+        margin: 0 10px;
+        border-bottom: 3px solid transparent;
+        padding-bottom: 5px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .categories-list li a {
+        font-size: 0.8em;
+        color: #47525E;
+        text-decoration: none;
+        transition: color 100ms linear;
+        font-weight: 500;
+    }
+
+    .categories-list li:hover>a {
+        color: red;
+    }
+
+    .categories-list li:hover {
+        border-bottom: 3px solid red;
+    }
+
+    .categories-list li a > i{
+        transform: rotate(0);
+        transition: transform 200ms ease;
+        font-size: 14px;
+    }
+
+    .categories-list li:hover a > i{
+        transform: rotate(90deg);
+    }
+
+    .categories-list {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .nav-categories-display{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        max-width: 1150px;
+        width: 100%;
+        background-color: white;
+        margin: 0 auto; 
+        top: 63px;
+        left: 0;
+        right: 0;
+        border-radius: 0px 0px 50px 50px;
+        border-top: 1px solid #cfcfcf;
+        border: 1px solid #cfcfcf;
+        transform: translate(-500%);
+        transition: transform 300ms ease;
+        cursor: default;
+    }
+
+    .categories-list li:hover > .nav-categories-display{
+        transform: none;
+    }
+
+    .nav-menu-display-electricas{
+        z-index: 1001;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-menu-display-acusticas{
+        z-index: 1002;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-menu-display-bajos{
+        z-index: 1003;
+        display: flex;
+        justify-content: center;
+    }
+
+    .display-guitar{
+        width: 14%;
+        height: auto;
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .nav-menu-display-bajos .display-guitar {
+        width: 16%;
+    }
+    
+    .display-guitar:hover {
+        background-color: #ebebeb;
+        border-radius: 20px;
+    }
+
+    .display-guitar div{
+        padding: 5px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-categories-display div div img{
+        border-radius: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .display-guitar-name{
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        justify-content: center;
+    }
+
+    .nav-cart {
+        order: 4;
+        font-size: 1.4em;
+    }
+
+    .nav-account {
+        order: 5;
+        font-size: 1.4em;
+    }
+}
+
+@media (min-width: 2200px){
+    .nav-categories-display{
+        top: 62px;
+    }
+}
+
+@media (min-width: 3000px){
+    .nav-categories-display{
+        top: 61px;
+    }
+}

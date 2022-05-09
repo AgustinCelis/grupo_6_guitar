@@ -1,25 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/detailStyle.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a853d3fc21.js" crossorigin="anonymous"></script>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="css/detailStyle.css" type="text/css">
+    <link rel="stylesheet" href="css/partials/header.css">
     <title>Detalle</title>
 </head>
 
 <body>
-    <%- include('partials/header') %>   
+    <%- include('./partials/header') %>
     <main>
         <section class="producto">
             <h1 class="product-title">AMERICAN ULTRA<br>STRATOCASTER® HSS</h1>
+            <div class="product-extra-images">
+                <div class="extra-image">
+                    <a href="">
+                        <img src="images/guitarras/detalle/1.2.png">
+                    </a>
+                </div>
+                <div class="extra-image">
+                    <a href="">
+                        <img src="images/guitarras/detalle/1.3.png">
+                    </a>
+                </div>
+                <div class="extra-image">
+                    <a href="">
+                        <img src="images/guitarras/detalle/1.4.png">
+                    </a>
+                </div>
+            </div>
             <div class="product-image">
-                <img src="images/guitarras/1.1.png">
-            </div>         
-            <div class="producto-descripcion-precio-comprar">      
+                <img src="images/guitarras/detalle/stratocaster1.png">
+            </div>
+            <div class="producto-descripcion-precio-comprar">
                 <h1 class="product-title-inside-div">AMERICAN ULTRA<br>STRATOCASTER® HSS</h1>
                 <ul class="nav-carrousel">
                     <li></li>
@@ -29,7 +43,9 @@
                 <div class="product-price">
                     <span>$10.000</span>
                 </div>
-                <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi, sed odio fringilla eget sit condimentum. Morbi aenean ligula nunc pellentesque. Nisl fames auctor est mattis quis. Amet, sit sapien mattis fringilla vivamus massa semper ornare.</div>
+                <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi, sed odio
+                    fringilla eget sit condimentum. Morbi aenean ligula nunc pellentesque. Nisl fames auctor est mattis
+                    quis. Amet, sit sapien mattis fringilla vivamus massa semper ornare.</div>
                 <div class="color">
                     <p class="color-title">Color</p>
                     <ul class="color-options">
@@ -48,10 +64,18 @@
                     </div>
                 </div>
                 <div class="product-comprar">
-                    <button type="button">Comprar ahora</button>
+                    <a href="">
+                        <button type="button">
+                            Comprar ahora
+                        </button>
+                    </a>
                 </div>
                 <div class="product-agregar-carrito">
-                    <button type="button">Agregar al carrito</button>
+                    <a href="/carrito">
+                        <button type="button">
+                            Agregar al carrito
+                        </button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -109,11 +133,10 @@
                 <li>
                     <div class="producto-similar">
                         <a href="/detalle">
-                            <img src="images/guitarras/flyingv.png">
+                            <img src="images/guitarras/electricas-display/flyingv.png">
                             <div class="producto-similar-descripcion">
                                 <span>Lorem ipsum</span>
                             </div>
-                            <p></p>
                     </div>
                     </a>
                     </div>
@@ -121,11 +144,10 @@
                 <li>
                     <div class="producto-similar">
                         <a href="/detalle">
-                            <img src="images/guitarras/prs.png">
+                            <img src="images/guitarras/electricas-display/prs.png">
                             <div class="producto-similar-descripcion">
                                 <span>Lorem ipsum</span>
                             </div>
-                            <p></p>
                     </div>
                     </a>
                     </div>
@@ -133,11 +155,10 @@
                 <li>
                     <div class="producto-similar">
                         <a href="/detalle">
-                            <img src="images/guitarras/lespaul.png">
+                            <img src="images/guitarras/electricas-display/lespaul.png">
                             <div class="producto-similar-descripcion">
                                 <span>Lorem ipsum</span>
                             </div>
-                            <p></p>
                     </div>
                     </a>
                     </div>
@@ -145,7 +166,7 @@
                 <li>
                     <div class="producto-similar">
                         <a href="/detalle">
-                            <img src="images/guitarras/superstrat.png">
+                            <img src="images/guitarras/electricas-display/superstrat.png">
                             <div class="producto-similar-descripcion">
                                 <span>Lorem ipsum</span>
                             </div>
