@@ -4,6 +4,9 @@ const controller = {
     },
     mostrarEdit: function(req, res){
         res.status(200).render('products/edit')
+    },
+    detalle: function(req, res){
+        res.status(200).render('products/detail')
     }
 }
 
