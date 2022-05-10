@@ -20,7 +20,7 @@ app.listen(4000, () =>{
 
 app.use('/', rutaHome)
 
-app.use('/product', rutaProduct);
+app.use('/producto', rutaProduct);
 
 app.use('/', rutaCart);
 

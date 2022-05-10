@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/createProductStyle.css" type="text/css">
+    <title>Carrito</title>
+</head>
+
+<body>
+    <main>
+        <form>
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="descripcion" placeholder="Descripcion" maxlength="240" required></textarea>
+            <input type="text" name="precio" placeholder="Precio" required>
+            <div class="precio-oferta">
+                <input type="checkbox" name="precio-oferta-check">
+                <input type="text" name="precio" placeholder="Precio oferta">
+            </div>
+            <div class="categoria-select">
+                <label>Categorias</label>
+                <select class="categoria">
+                    <option value="eletrica">Eléctricas</option>
+                    <option value="acustica">Acústicas</option>
+                    <option value="bajos">Bajos</option>
+                    <option value="amplificacion">Amplificación</option>
+                    <option value="accesorio">Accesorios</option>
+                    <option value="repuesto">Repuestos</option>
+                </select>
+                <br>
+                <label>Sub-categoria</label>
+                <select class="sub-categoria">
+                    <option value="eletrica">Stratocaster</option>
+                    <option value="acustica">Telecaster</option>
+                    <option value="bajos">Paul Reed Smith</option>
+                    <option value="amplificacion">Solid Guitar</option>
+                    <option value="accesorio">Les Paul</option>
+                    <option value="repuesto">Superstrat</option>
+                </select>
+            </div>
+            <div class="colores">
+                <label for="imagenes-colores">Colores</label>
+                <input type="file" name="imagenes-colores" id="imagenes-colores" accept="image/*" multiple required>
+                <span class="add-colors"><i class="fa-solid fa-plus"></i></span>
+            </div>
+            <div class="cantidad-disponible-div">
+                <label for="cantidad-disponible">Cantidad disponible</label>
+                <input type="number" name="cantidad-disponible" placeholder="Cantidad disponible">
+            </div>
+            <div class="caracteristicas">
+                <p class="caracteristica-1">
+                    <label for="imagenes-colores">Caracteristica 1</label>
+                    <input type="text" name="caracteristica-1" required>
+                </p>
+                <p class="caracteristica-2">
+                    <span class="add-colors"><i class="fa-solid fa-plus"></i></span>
+                    <label for="imagenes-colores">Caracteristica 2</label>
+                    <input type="text" name="caracteristica-2" required>
+                </p>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
