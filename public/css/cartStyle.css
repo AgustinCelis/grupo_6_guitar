@@ -3,23 +3,24 @@
 * {
     box-sizing: border-box;
     margin: 0 auto;
-    font-family: 'Readex Pro', sans-serif;
-  }
-  
-  body {
-    background-color:white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: white;
     display: flex;
     flex-direction: column;
-  }
-  header{
-      position: relative;
-  }
+}
 
-  main{
-      margin: 0 auto;
-      max-width: 1920px;
-      width: 95%;
-  }
+header {
+    position: relative;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1920px;
+    width: 95%;
+}
 
 
 
@@ -103,7 +104,7 @@
     align-self: center;
 }
 
-.price-unitario{
+.price-unitario {
     font-weight: bold;
 }
 
@@ -151,7 +152,7 @@
     margin: 0;
 }
 
-.input{
+.input {
     margin: 0;
 }
 
@@ -260,11 +261,11 @@
     border-bottom: 1px solid #ccc;
 }
 
-.total-tabla-align{
+.total-tabla-align {
     margin: 0;
 }
 
-.respuesta-tabla-total{
+.respuesta-tabla-total {
     text-align: right;
 }
 
@@ -360,7 +361,7 @@
         margin-bottom: 3vh;
     }
 
-    .cart-total{
+    .cart-total {
         width: 100%;
     }
 
@@ -378,44 +379,45 @@
     }
 }
 
-@media (min-width: 0px) and (max-width: 768px){
+@media (min-width: 0px) and (max-width: 768px) {
 
-    body{
+    body {
         width: 100%;
     }
-    
+
     .cart-h1 {
         margin-top: 5vh;
         margin-left: 5vw;
     }
 
-    .main-container{
+    .main-container {
         flex-direction: column;
         width: 98%;
     }
-    .cart{
+
+    .cart {
         width: 100%;
         margin-bottom: 2vh;
     }
 
-    .cart-total{
+    .cart-total {
         width: 100%;
         margin: 0 auto;
     }
 
-    .tabla-header{
+    .tabla-header {
         display: none;
     }
 
-    .price-total{
+    .price-total {
         display: none;
     }
-    
-    .cart-container{
+
+    .cart-container {
         padding: 0;
     }
 
-    .tabla-body tr{
+    .tabla-body tr {
         margin: 20px;
         display: flex;
         flex-direction: row;
@@ -423,27 +425,27 @@
         position: relative;
     }
 
-    .product-img{
+    .product-img {
         position: absolute;
         top: 0px;
         left: 0px;
     }
-    
-    .tabla-body tr td{
+
+    .tabla-body tr td {
         padding: 0;
     }
 
-    .producto{
+    .producto {
         flex-basis: 100%;
         flex-grow: 1;
         margin-bottom: 10px;
     }
 
-    .product-name{
+    .product-name {
         margin-left: 90px;
     }
 
-    .price-unitario{
+    .price-unitario {
         display: flex;
         align-items: center;
         margin-left: 90px;
@@ -451,14 +453,14 @@
         font-size: 20px;
     }
 
-    .eliminar{
+    .eliminar {
         display: flex;
         margin: 10px 0 0 90px;
         flex-basis: 100%;
         justify-content: flex-start;
     }
 
-    .eliminar::after{
+    .eliminar::after {
         content: "Eliminar";
         color: red;
         margin-left: 5px;

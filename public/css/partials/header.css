@@ -13,6 +13,7 @@ header {
     font-size: 24px;
     color: #47525E;
     position: relative;
+    box-shadow: 0px 0px 5px rgba(100, 100, 100, 0.5);
 }
 
 
@@ -210,11 +211,6 @@ header {
         justify-content: space-around;
     }
 
-    main{
-        max-width: 1920px;
-        width: 100%;
-    }
-
     .menuToggle{
         order: 1;
     }
@@ -313,7 +309,7 @@ header {
         color: #47525E;
         text-decoration: none;
         transition: color 100ms linear;
-        font-weight: 500;
+        font-weight: 600;
     }
 
     .categories-list li:hover>a {

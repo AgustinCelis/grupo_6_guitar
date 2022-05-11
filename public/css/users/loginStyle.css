@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;900&family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@100;200;300;400;600;700;800;900&display=swap');
 
 * {
-    box-sizing: border-box;
-    margin: 0 auto;
-    font-family: 'Readex Pro', sans-serif;
-  }
-  
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
 body {
-    background-color:white;
+    background-color: white;
     display: flex;
     flex-direction: column;
     color: #47525E;
@@ -53,12 +53,6 @@ section {
 }
 
 .login-title {
-    margin: 0 10px;
-    font-size: 22px;
-    opacity: 0.5;
-}
-
-.register-title {
     background-color: white;
     font-size: 32px;
     margin: 0;
@@ -67,8 +61,15 @@ section {
     border-radius: 18px;
 }
 
+.register-title {
+    margin: 0 10px;
+    font-size: 22px;
+    opacity: 0.5;
+}
+
 form {
     text-align: center;
+    border-radius: 70px;
 }
 
 form div {
@@ -86,7 +87,7 @@ form div label {
 }
 
 form div input {
-    height: 38px;
+    height: 40px;
     padding: 0 5px;
     border: none;
     border-radius: 6px;
@@ -100,25 +101,45 @@ form div input::placeholder {
     opacity: 0.5;
 }
 
-.terminos-condiciones{
+.cuentas-externas {
     display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 0 auto;
     align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    width: 90%;
 }
 
-.terminos-condiciones label{
-    font-weight: 400;
-    font-size: 14px;
-    flex-grow: 1;
-    flex-basis: 85%;
+
+.select-cuenta-externa {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
 }
-.terminos-condiciones input{
-    flex-basis: 15%;
+
+.select-cuenta-externa a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 85%;
+    height: 40px;
+    background-color: white;
+    border-radius: 6px;
+    color: #47525E;
+    text-decoration: none;
+}
+
+.select-cuenta-externa img {
+    width: 32px;
     height: auto;
-    border: 0px solid transparent;
-    outline: none;
+    margin: 0 15px;
+}
+
+.select-cuenta-externa p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left;
 }
 
 .boton-submit {
@@ -128,7 +149,7 @@ form div input::placeholder {
     background-color: #47525E;
     font-weight: bold;
     height: 44px;
-    margin: 5px 0 15px;
+    margin: 25px 0;
     border-radius: 5px;
     cursor: pointer;
     transition: all 100ms linear;
@@ -154,11 +175,12 @@ form div input::placeholder {
     transform: scale(0.98);
 }
 
-.container-signin{
-    margin: 20px auto 0;
+.container-signin {
+    margin: 0 auto;
 }
 
-.container-signin p{
+.container-signin p {
     text-align: center;
-    margin: 0;
+    margin: 20px 0 0;
+    font-weight: 500;
 }

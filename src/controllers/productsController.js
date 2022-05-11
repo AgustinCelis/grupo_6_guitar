@@ -1,13 +1,18 @@
+const actions = require('../database/actions')
+
 const controller = {
-    mostrarCreate: function(req, res){
-        res.status(200).render('products/create')
+    showCreateProduct: function(req, res){
+        res.status(200).render('products/create');
     },
-    mostrarEdit: function(req, res){
-        res.status(200).render('products/edit')
+    showEditProduct: function(req, res){
+        res.status(200).render('products/edit');
     },
-    detalle: function(req, res){
-        res.status(200).render('products/detail')
+    showDetail: function(req, res){
+        res.status(200).render('products/detail');
+    },
+    showMainList: function(req, res){
+        res.status(200).render('products/mainList');
     }
-}
+};
 
 module.exports = controller;
