@@ -18,122 +18,39 @@ main{
 }
 
 @media (min-width: 1280px) {
-  
-  /* GUITARRAS DESTACADAS Y ULTIMOS INGRESOS */
-  .populares {
+  .populares{
     width: 90%;
-    color: #47525E;
-    margin: 0 auto;
   }
-
-  .populares-title {
-    font-size: 2.5em;
-    font-weight: bold;
-    width: 100%;
-    margin: 0 auto 6vh;
-    color: #47525E;
-  }
-
-  .populares-guitarras {
+  .populares-guitarras{
     display: flex;
+    flex-direction: row;
     width: 100%;
-    align-items: center;
-    justify-content: space-around;
-    margin: 0 auto 10vh;
+    margin: 70px auto 90px;
   }
-
-  .populares-guitar-div {
-    max-width: 16%;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 10px;
-    transition: background-color, transform 200ms ease;
-    padding: 10px;
+  .populares-guitarras div{
+    flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+    padding: 0 30px;
   }
-
-  .populares-guitar-div:hover {
-    transform: scale(1.1);
-    background-color: #ffffff5d;
-    box-shadow: 0px 0px 8px rgb(100, 100, 100, 0.5);
-    opacity: 1;
-  }
-
-  .popular-guitar-link {
+  .populares-guitarras div a{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    cursor: pointer;
+    justify-content: space-between;
+    text-align: center;
     text-decoration: none;
     color: #47525E;
-    font-size: 1em;
+    font-size: 20px;
+    font-weight: 500;
   }
-
-  .popular-guitar-link img {
-    width: 100%;
-  }
-
-  .popular-guitar-price {
-    opacity: 0;
-    color: #47525E;
-    transition: opacity 600ms ease;
-  }
-
-  .populares-guitar-div:hover a>.popular-guitar-price {
-    opacity: 1;
+  .populares-guitarras div a img {
+    max-height: 650px;
   }
 }
 
 
 @media (min-width: 0px) and (max-width: 1279px) {
 
-  /* GUITARRAS DESTACADAS Y ULTIMOS INGRESOS */
-  .populares {
-    width: 90%;
-    margin: 6vh auto;
-    color: #47525E;
-  }
-
-  .populares-title {
-    font-size: 2.5em;
-    font-weight: bold;
-    width: 100%;
-    margin: 0 auto 8vh;
-    color: #47525E;
-  }
-
-  .populares-guitarras {
-    width: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    margin: 0 auto;
-  }
-
-  .populares-guitar-div {
-    flex-basis: 14%;
-    margin-bottom: 7vh;
-  }
-
-  .popular-guitar-link {
-    display: flex;
-    flex-direction: column;
-    color: #47525E;
-    text-decoration: none;
-    align-items: center;
-    text-align: center;
-    font-weight: bold;
-  }
-
-  .popular-guitar-link img {
-    width: 100%;
-  }
-
-  .popular-guitar-price {
-    display: none;
-    color: #47525E;
-  }
 }
 
 /* CARROUSEL */
@@ -231,22 +148,5 @@ main{
 
   .carrousel-changer {
     display: none;
-  }
-
-  /* GUITARRAS DESTACADAS Y ULTIMOS INGRESOS */
-
-  .populares-guitar-div {
-    flex-basis: 40%;
-    margin-bottom: 7vh;
-    color: #47525E;
-  }
-
-  .populares-title {
-    font-size: 8vw;
-  }
-
-  .popular-guitar-name {
-    font-size: 3.5vw;
-    color: #47525E;
   }
 }

@@ -1,22 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@100;200;300;400;600;700;800;900&display=swap');
 
 * {
-    box-sizing: border-box;
-    margin: 0 auto;
-    font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
 }
 
-  body {
-    background-color:white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-  }
+body {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
 
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
+  color: #47525E;
+}
+
+form > input{
+  padding: 10px 40px 10px 10px;
+  border: 3px solid #c5c5c5;
+  border-radius: 5px;
+  outline-color: #47525E;
+  margin-bottom: 15px;
+}
+
+form > input::placeholder{
+  opacity: 0.5;
+}
+
+form div{
+  margin: 10px 0;
+}
+
+.colores label{
+  background-color: #47525E;
+  color: white;
+  padding: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.colores input{
+  display: none;
+}

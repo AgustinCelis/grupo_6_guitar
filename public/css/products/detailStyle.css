@@ -48,11 +48,15 @@ main {
 .product-image {
   display: flex;
   justify-content: center;
-  width: 100%;
+  align-self: center;
+  height: 100%;
+  width: auto;
 }
 
 .product-image img {
   transform: rotate(10deg);
+  max-height: 500px;
+  width: auto;
 }
 
 /* CARROUSEL DE COLORES */

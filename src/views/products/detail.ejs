@@ -25,34 +25,39 @@
                 </div>
                 <div class="extra-image">
                     <a href="">
-                        <img src="../images/guitarras/detalle/1.4.png">
+                        <img src="/images/guitarras/detalle/1.4.png">
                     </a>
                 </div>
             </div>
             <div class="product-image">
-                <img src="../images/guitarras/detalle/stratocaster1.png">
+                <a href="">
+                    <img src=<%=producto[0].imagen%>>
+                </a>
             </div>
             <div class="producto-descripcion-precio-comprar">
-                <h1 class="product-title-inside-div">AMERICAN ULTRA<br>STRATOCASTER® HSS</h1>
+                <h1 class="product-title-inside-div"><%=(producto[0].product_name.toUpperCase()).replace('_', ' ')%></h1>
                 <ul class="nav-carrousel">
                     <li></li>
                     <li></li>
                     <li></li>
                 </ul>
                 <div class="product-price">
-                    <span>$10.000</span>
+                    <span>
+                        <%function numberWithCommas(x) {%>
+                        <% return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'); %>
+                        <% } %>
+                        <%=numberWithCommas(`$${producto[0].price}`)%>
+                    </span>
                 </div>
-                <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi, sed odio
-                    fringilla eget sit condimentum. Morbi aenean ligula nunc pellentesque. Nisl fames auctor est mattis
-                    quis. Amet, sit sapien mattis fringilla vivamus massa semper ornare.</div>
+                <div class="product-description"><%=producto[0].characteristics%></div>
                 <div class="color">
                     <p class="color-title">Color</p>
                     <ul class="color-options">
-                        <li><img src="../images/guitarras/colores/colorAzul.png" alt="color blue"></li>
-                        <li><img src="../images/guitarras/colores/colorNaranja.png" alt="color naranja"></li>
-                        <li><img src="../images/guitarras/colores/colorNegro.png" alt="color negro"></li>
-                        <li><img src="../images/guitarras/colores/colorRojo.png" alt="color rojo"></li>
-                        <li><img src="../images/guitarras/colores/colorPerlaAzul.png" alt="color perla azul"></li>
+                        <li><img src="/images/guitarras/colores/colorAzul.png" alt="color blue"></li>
+                        <li><img src="/images/guitarras/colores/colorNaranja.png" alt="color naranja"></li>
+                        <li><img src="/images/guitarras/colores/colorNegro.png" alt="color negro"></li>
+                        <li><img src="/images/guitarras/colores/colorRojo.png" alt="color rojo"></li>
+                        <li><img src="/images/guitarras/colores/colorPerlaAzul.png" alt="color perla azul"></li>
                     </ul>
                 </div>
                 <div class="product-stock-disponible">
@@ -82,19 +87,19 @@
             <div class="caracteristicas">
                 <h2 class="caracteristicas-title">Caracteristicas</h2>
                 <div class="caracteristicas-list">
-                    <img src="../images/list-caracteristicas.svg">
+                    <img src="/images/list-caracteristicas.svg">
                     <span>Lorem ipsum</span>
                 </div>
                 <div class="caracteristicas-list">
-                    <img src="../images/list-caracteristicas.svg">
+                    <img src="/images/list-caracteristicas.svg">
                     <span>Lorem ipsum</span>
                 </div>
                 <div class="caracteristicas-list">
-                    <img src="../images/list-caracteristicas.svg">
+                    <img src="/images/list-caracteristicas.svg">
                     <span>Lorem ipsum</span>
                 </div>
                 <div class="caracteristicas-list">
-                    <img src="../images/list-caracteristicas.svg">
+                    <img src="/images/list-caracteristicas.svg">
                     <span>Lorem ipsum</span>
                 </div>
             </div>
@@ -132,7 +137,7 @@
                 <li>
                     <div class="producto-similar">
                         <a href="/producto/detalle">
-                            <img src="../images/guitarras/electricas-display/flyingv.png">
+                            <img src="/images/guitarras/electricas-display/flyingv.png">
                             <div class="producto-similar-descripcion">
                                 <span>Lorem ipsum</span>
                             </div>
@@ -143,7 +148,7 @@
                 <li>
                     <div class="producto-similar">
                         <a href="/producto/detalle">
-                            <img src="../images/guitarras/electricas-display/prs.png">
+                            <img src="/images/guitarras/electricas-display/prs.png">
                             <div class="producto-similar-descripcion">
                                 <span>Lorem ipsum</span>
                             </div>
@@ -154,7 +159,7 @@
                 <li>
                     <div class="producto-similar">
                         <a href="/producto/detalle">
-                            <img src="../images/guitarras/electricas-display/lespaul.png">
+                            <img src="/images/guitarras/electricas-display/lespaul.png">
                             <div class="producto-similar-descripcion">
                                 <span>Lorem ipsum</span>
                             </div>
@@ -165,7 +170,7 @@
                 <li>
                     <div class="producto-similar">
                         <a href="/producto/detalle">
-                            <img src="../images/guitarras/electricas-display/superstrat.png">
+                            <img src="/images/guitarras/electricas-display/superstrat.png">
                             <div class="producto-similar-descripcion">
                                 <span>Lorem ipsum</span>
                             </div>

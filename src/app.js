@@ -18,12 +18,12 @@ app.listen(4000, () =>{
 
 app.use('/', rutaHome)
 
-app.use('/producto', rutaProduct);
+app.use('/productos', rutaProduct);
 
 app.use('/', rutaCart);
 
 app.use('/usuario', rutaUsers);
 
 app.use((req, res, next)=>{
-    res.status(404).send('not-found');
+    res.status(404).render('error404');
 });
