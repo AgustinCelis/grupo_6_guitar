@@ -9,17 +9,22 @@
 
 <body>
     <main>
-        <form>
-            <input type="text" name="nombre" placeholder="Nombre" required>
-            <input type="text" name="descripcion" placeholder="Descripcion" maxlength="240" required></textarea>
-            <input type="text" name="precio" placeholder="Precio" required>
+        <form action="/productos/crear" method="POST" enctype="multipart/form-data">
+            
+            <input type="text" name="nombre" placeholder="Nombre">
+
+            <input type="text" name="descripcion" placeholder="Descripcion" maxlength="240"></input>
+
+            <input type="text" name="precio" placeholder="Precio">
+
             <div class="precio-oferta">
                 <input type="checkbox" name="precio-oferta-check">
-                <input type="text" name="precio" placeholder="Precio oferta">
+                <input type="text" name="precio-oferta" placeholder="Precio oferta">
             </div>
+
             <div class="categoria-select">
                 <label>Categorias</label>
-                <select class="categoria">
+                <select name="categoria" class="categoria">
                     <option value="eletrica">Eléctricas</option>
                     <option value="acustica">Acústicas</option>
                     <option value="bajos">Bajos</option>
@@ -29,7 +34,7 @@
                 </select>
                 <br>
                 <label>Sub-categoria</label>
-                <select class="sub-categoria">
+                <select name="sub-categoria" class="sub-categoria">
                     <option value="eletrica">Stratocaster</option>
                     <option value="acustica">Telecaster</option>
                     <option value="bajos">Paul Reed Smith</option>
@@ -38,24 +43,30 @@
                     <option value="repuesto">Superstrat</option>
                 </select>
             </div>
+
             <div class="colores">
                 <label for="imagenes-colores">Añadir colores</label>
-                <input type="file" name="imagenes-colores" id="imagenes-colores" accept="image/*" multiple required>
+                <input type="file" name="imagenes-colores" id="imagenes-colores" accept="image/*" multiple>
             </div>
+
             <div class="cantidad-disponible-div">
                 <label for="cantidad-disponible">Cantidad disponible</label>
                 <input type="number" name="cantidad-disponible" placeholder="Cantidad disponible">
             </div>
+
             <div class="caracteristicas">
                 <p class="caracteristica-1">
                     <label for="imagenes-colores">Caracteristica 1</label>
-                    <input type="text" name="caracteristica-1" required>
+                    <input type="text" name="caracteristica-1">
                 </p>
                 <p class="caracteristica-2">
                     <label for="imagenes-colores">Caracteristica 2</label>
-                    <input type="text" name="caracteristica-2" required>
+                    <input type="text" name="caracteristica-2">
                 </p>
             </div>
+
+            <button type="submit">Enviar</button>
+
         </form>
     </main>
 </body>

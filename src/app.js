@@ -10,6 +10,10 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
+
+app.use(express.urlencoded({ extended: false }))
+
+
 app.use(express.static(path.join(__dirname, '../public')))
 
 app.listen(4000, () =>{
@@ -24,6 +28,6 @@ app.use('/', rutaCart);
 
 app.use('/usuario', rutaUsers);
 
-app.use((req, res, next)=>{
-    res.status(404).render('error404');
-});
+// app.use((req, res, next)=>{
+//     res.status(404).render('error404');
+// });
