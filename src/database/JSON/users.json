@@ -1,0 +1,141 @@
+[{
+        "id": 1,
+        "username": "Jeff",
+        "email": "jkinnon0@yolasite.com",
+        "password": "d2MPTd",
+        "image": "user_1.jpg"
+    },
+    {
+        "id": 2,
+        "username": "Hilliary",
+        "email": "hflorence1@usa.gov",
+        "password": "c9cPQmi9dCX",
+        "image": "user_2.jpg"
+    },
+    {
+        "id": 3,
+        "username": "Gwenny",
+        "email": "grailton2@ycombinator.com",
+        "password": "8Bco3ou",
+        "image": "user_3.jpg"
+    },
+    {
+        "id": 4,
+        "username": "Alyson",
+        "email": "athornally3@washingtonpost.com",
+        "password": "gNXqDKGDo2",
+        "image": "user_4.jpg"
+    },
+    {
+        "id": 5,
+        "username": "Omar",
+        "email": "okingzeth4@prlog.org",
+        "password": "ZgLiglLn6pl",
+        "image": "user_5.jpg"
+    },
+    {
+        "id": 6,
+        "username": "Vale",
+        "email": "vwillgress5@nature.com",
+        "password": "lUznuXC27TB",
+        "image": "user_6.jpg"
+    },
+    {
+        "id": 7,
+        "username": "Erhard",
+        "email": "efilshin6@geocities.jp",
+        "password": "zWjXRhhLz5nB",
+        "image": "user_7.jpg"
+    },
+    {
+        "id": 8,
+        "username": "Reider",
+        "email": "raddicote7@mozilla.com",
+        "password": "WgazusDa",
+        "image": "user_8.jpg"
+    },
+    {
+        "id": 9,
+        "username": "Dwayne",
+        "email": "dverling8@wufoo.com",
+        "password": "vsKiQ2baJIP",
+        "image": "user_9.jpg"
+    },
+    {
+        "id": 10,
+        "username": "Joell",
+        "email": "jchaney9@instagram.com",
+        "password": "qMw88ecG3bRW",
+        "image": "user_10.jpg"
+    },
+    {
+        "id": 11,
+        "username": "Farr",
+        "email": "flengleta@umn.edu",
+        "password": "Jo24rH4j",
+        "image": "user_11.jpg"
+    },
+    {
+        "id": 12,
+        "username": "Hillel",
+        "email": "hcrichmerb@hibu.com",
+        "password": "5B1S7ZKh",
+        "image": "user_12.jpg"
+    },
+    {
+        "id": 13,
+        "username": "Alexio",
+        "email": "asommersettc@alexa.com",
+        "password": "96pmIMahc9T",
+        "image": "user_13.jpg"
+    },
+    {
+        "id": 14,
+        "username": "Marika",
+        "email": "mbittanyd@cyberchimps.com",
+        "password": "2SMmkuEtyA",
+        "image": "user_14.jpg"
+    },
+    {
+        "id": 15,
+        "username": "Muriel",
+        "email": "mlaysone@jugem.jp",
+        "password": "Tgd401G",
+        "image": "user_15.jpg"
+    },
+    {
+        "id": 16,
+        "username": "Veronica",
+        "email": "vstennetf@gnu.org",
+        "password": "y8QGv7yufS",
+        "image": "user_16.jpg"
+    },
+    {
+        "id": 17,
+        "username": "Warde",
+        "email": "wpenninig@woothemes.com",
+        "password": "WgvuX820KyY",
+        "image": "user_17.jpg"
+    },
+    {
+        "id": 18,
+        "username": "Edita",
+        "email": "ebanbrookh@tripod.com",
+        "password": "NURsKa7Q",
+        "image": "user_18.jpg"
+    },
+    {
+        "id": 19,
+        "username": "Orren",
+        "email": "oschreursi@scribd.com",
+        "password": "iyYyeENYo",
+        "image": "user_19.jpg"
+    },
+    {
+        "id": 20,
+        "username": "Jacob",
+        "email": "jtrowlej@youtu.be",
+        "password": "uy6aHfFARUQ",
+        "image": "user_20.jpg"
+    }
+]

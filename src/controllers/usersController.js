@@ -1,11 +1,11 @@
-const actions = require('../database/actions')
+const actions = require('../database/actions');
 
 const controller = {
     login: function(req, res){
-        res.status(200).render('users/login')
+        res.status(200).render('users/login');
     },
     register: function(req, res){
-        res.status(200).render('users/register')
+        res.status(200).render('users/register');
     }
 }
 

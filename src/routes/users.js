@@ -3,7 +3,7 @@ const router = express.Router();
 const usersController = require('../controllers/usersController');
 const multer = require('multer')
 
-router.get('/login', usersController.login)
-router.get('/register', usersController.register);
+router.get('/user/login', usersController.login)
+router.get('/user/register', usersController.register);
 
 module.exports = router;

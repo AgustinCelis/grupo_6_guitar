@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const rutaHome = require('./routes/home');
-const rutaProduct = require('./routes/product');
+const rutaProduct = require('./routes/products');
 const rutaCart = require('./routes/cart');
 const rutaUsers = require('./routes/users')
 
@@ -10,24 +10,22 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, '../public')));
 
-app.use(express.urlencoded({ extended: false }))
 
-
-app.use(express.static(path.join(__dirname, '../public')))
-
-app.listen(4000, () =>{
+app.listen(process.env.PORT || 4000, () =>{
     console.log('Server on port 4000');
 });
 
 app.use('/', rutaHome)
 
-app.use('/productos', rutaProduct);
+app.use('/', rutaProduct);
 
 app.use('/', rutaCart);
 
-app.use('/usuario', rutaUsers);
+app.use('/', rutaUsers);
 
-// app.use((req, res, next)=>{
-//     res.status(404).render('error404');
-// });
+app.use((req, res, next)=>{
+    res.status(404).render('error404');
+});

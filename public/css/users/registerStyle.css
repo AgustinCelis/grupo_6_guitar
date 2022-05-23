@@ -142,6 +142,7 @@ form div input::placeholder {
     width: 100%;
     height: 100%;
     background-color: transparent;
+    font-weight: 600;
     outline: none;
     border: none;
     color: white;

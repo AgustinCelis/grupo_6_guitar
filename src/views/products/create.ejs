@@ -9,13 +9,13 @@
 
 <body>
     <main>
-        <form action="/productos/crear" method="POST" enctype="multipart/form-data">
+        <form action="/products/create" method="POST" enctype="multipart/form-data">
             
             <input type="text" name="nombre" placeholder="Nombre">
 
             <input type="text" name="descripcion" placeholder="Descripcion" maxlength="240"></input>
 
-            <input type="text" name="precio" placeholder="Precio">
+            <input type="number" name="precio" placeholder="Precio">
 
             <div class="precio-oferta">
                 <input type="checkbox" name="precio-oferta-check">

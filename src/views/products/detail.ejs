@@ -31,11 +31,13 @@
             </div>
             <div class="product-image">
                 <a href="">
-                    <img src=<%=producto[0].imagen%>>
+                    <img src='/images/guitarras/detalles/<%=producto.imagen%>'>
                 </a>
             </div>
             <div class="producto-descripcion-precio-comprar">
-                <h1 class="product-title-inside-div"><%=(producto[0].product_name.toUpperCase()).replace('_', ' ')%></h1>
+                <h1 class="product-title-inside-div">
+                    <%=(producto.product_name.toUpperCase())%>
+                </h1>
                 <ul class="nav-carrousel">
                     <li></li>
                     <li></li>
@@ -43,13 +45,13 @@
                 </ul>
                 <div class="product-price">
                     <span>
-                        <%function numberWithCommas(x) {%>
-                        <% return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'); %>
+                        <%function numberWithCommas(price) {%>
+                        <% return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'); %>
                         <% } %>
-                        <%=numberWithCommas(`$${producto[0].price}`)%>
+                        <%=numberWithCommas(`$${producto.price}`)%>
                     </span>
                 </div>
-                <div class="product-description"><%=producto[0].characteristics%></div>
+                <div class="product-description"><%=producto.characteristics%></div>
                 <div class="color">
                     <p class="color-title">Color</p>
                     <ul class="color-options">
