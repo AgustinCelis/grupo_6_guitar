@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/carrito', (req, res) =>{
+router.get('/cart', (req, res) =>{
     res.status(200).render('cart')
 })
 

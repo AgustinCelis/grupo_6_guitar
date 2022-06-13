@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <title>Eliminar</title>
+</head>
+<body>
+    <form action="/products/delete/<%=idProduct%>?_method=DELETE" method="POST" enctype="multipart/form-data">
+        <%if(jsonData.find(product => product.id == idProduct) == undefined){%>
+            <label for="">No existe el producto con ID <%=idProduct%></label>
+        <%}else{%>
+            <label for="">Seguro que queres eliminar el producto con ID: <%=idProduct%>?</label>
+            <input type="text" name="id" value="<%= idProduct %>" style="display: none;">
+            <input type="submit">  
+        <%}%>    
+    </form>
+</body>
+</html>

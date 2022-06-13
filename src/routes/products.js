@@ -20,13 +20,16 @@ const uploadFile = multer({storage: storage});
 router.get('/products', productsController.showMainList);
 
 router.get('/products/create', productsController.showCreateProduct);
-router.post('/products/create', uploadFile.single('imagenes-colores'), productsController.processCreateProduct);
+router.post('/products/create', uploadFile.any(), productsController.processCreateProduct);
 
-router.get('/products/edit', productsController.showEditProduct);
-router.post('/editar', productsController.processEditProduct);  
+router.get('/products/edit/:id', productsController.showEditProduct);
+router.put('/products/edit/:id', productsController.processEditProduct);  
 
 router.get('/products/adminlist', productsController.showListAdmin);
 
-router.get('/products/:id', productsController.showDetail);
+router.get('/products/detail/:id', productsController.showDetail);
+
+router.get('/products/delete/:id', productsController.showDeleteProduct);
+router.delete('/products/delete/:id', productsController.processDelete);
 
 module.exports = router;

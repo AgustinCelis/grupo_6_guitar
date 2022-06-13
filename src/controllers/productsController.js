@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs')
 var products = require('../database/JSON/products.json');
 const { json } = require('express/lib/response');
+const { body } = require('express-validator');
 const pathToDatabaseProducts = path.join(__dirname, '../database/JSON/products.json')
 
 const controller = {
@@ -11,9 +12,10 @@ const controller = {
     processCreateProduct: function(req, res){
         let body = req.body;
         let jsonData = JSON.parse(fs.readFileSync(pathToDatabaseProducts, 'utf8'));
-        let id = 0;
+        let id = 1;
         if(jsonData.length > 0){    
-            id = jsonData.length + 1;
+            let lastProduct = jsonData[jsonData.length - 1]
+            id = lastProduct.id + 1
         }
         let objetoACrear = {id, ...body}
         jsonData.push(objetoACrear);
@@ -21,10 +23,20 @@ const controller = {
         res.send(jsonData);
     },
     showEditProduct: function (req, res) {
-        return res.status(200).render('products/edit');
+        const jsonData = JSON.parse(fs.readFileSync(pathToDatabaseProducts), 'utf8');
+
+        let product = jsonData.find(product => product.id == req.params.id);
+
+        return res.status(200).render('products/edit', {product});
     },
     processEditProduct: function(req, res){
+        let jsonData = JSON.parse(fs.readFileSync(pathToDatabaseProducts, 'utf8'));
+        
+        let productToEdit = jsonData.find(product => product.id == req.params.id);
+        productToEdit = req.body;
 
+        fs.writeFileSync(pathToDatabaseProducts, JSON.stringify(jsonData));
+        res.redirect('/')
     },
     showDetail: function (req, res) {
         let producto = products.find(product => {
@@ -32,18 +44,31 @@ const controller = {
                 return product;
             }
         });
-        if(producto == undefined){
-            return res.status(404).render('error404');
-        }else{
-            return res.status(200).render('products/detail', {producto});
-        }
+        producto != undefined ? res.status(400).render('products/detail', {producto}) : res.status(404).render('error404') 
     },
     showMainList: function (req, res) {
         return res.status(200).render('products/mainList', {products});
     },
     showListAdmin: function(req, res){
         res.status(200).render('products/listAdmin', {products});
-    }
+    },
+    showDeleteProduct: function(req, res){
+        let idProduct = req.params.id;
+        let jsonData = JSON.parse(fs.readFileSync(pathToDatabaseProducts), 'utf8');
+        res.render('products/delete', {
+            idProduct,
+            jsonData
+        });
+    },
+    processDelete: function(req, res){
+        let jsonData = JSON.parse(fs.readFileSync(pathToDatabaseProducts), 'utf8');
+
+        jsonData = jsonData.filter(dato => dato.id != req.params.id);
+
+        fs.writeFileSync(pathToDatabaseProducts, JSON.stringify(jsonData)); 
+        
+        res.redirect('/')
+    },
 };
 
 module.exports = controller;

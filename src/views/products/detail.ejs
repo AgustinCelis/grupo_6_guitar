@@ -31,12 +31,12 @@
             </div>
             <div class="product-image">
                 <a href="">
-                    <img src='/images/guitarras/detalles/<%=producto.imagen%>'>
+                    <img src='/images/guitarras/detalles/<%=producto.image%>'>
                 </a>
             </div>
             <div class="producto-descripcion-precio-comprar">
                 <h1 class="product-title-inside-div">
-                    <%=(producto.product_name.toUpperCase())%>
+                    <%=(producto.type_of_guitar.toUpperCase() + " " + producto.name.toUpperCase())%>
                 </h1>
                 <ul class="nav-carrousel">
                     <li></li>
@@ -51,7 +51,7 @@
                         <%=numberWithCommas(`$${producto.price}`)%>
                     </span>
                 </div>
-                <div class="product-description"><%=producto.characteristics%></div>
+                <div class="product-description"><%=producto.description%></div>
                 <div class="color">
                     <p class="color-title">Color</p>
                     <ul class="color-options">
@@ -63,7 +63,7 @@
                     </ul>
                 </div>
                 <div class="product-stock-disponible">
-                    <span>(50 disponibles)</span>
+                    <span>(<%=producto.available_amount%> disponibles)</span>
                     <div class="product-cantidad">
                         <span>Cantidad:</span>
                         <span><i class="fa-solid fa-angle-up"></i></span>
@@ -77,7 +77,7 @@
                     </a>
                 </div>
                 <div class="product-agregar-carrito">
-                    <a href="/carrito">
+                    <a href="/cart">
                         <button type="button">
                             Agregar al carrito
                         </button>
@@ -88,47 +88,28 @@
         <section class="caracteristicas-especificaciones">
             <div class="caracteristicas">
                 <h2 class="caracteristicas-title">Caracteristicas</h2>
-                <div class="caracteristicas-list">
+                <%for(let index = 1; index <= 4; index++){%>
+                    <%let caracteristica = "producto.characteristic_" + index%>
+                    <div class="caracteristicas-list">
                     <img src="/images/list-caracteristicas.svg">
-                    <span>Lorem ipsum</span>
-                </div>
-                <div class="caracteristicas-list">
-                    <img src="/images/list-caracteristicas.svg">
-                    <span>Lorem ipsum</span>
-                </div>
-                <div class="caracteristicas-list">
-                    <img src="/images/list-caracteristicas.svg">
-                    <span>Lorem ipsum</span>
-                </div>
-                <div class="caracteristicas-list">
-                    <img src="/images/list-caracteristicas.svg">
-                    <span>Lorem ipsum</span>
-                </div>
-            </div>
+                    <span><%=eval(caracteristica)%></span>
+                    </div>
+                <%}%>
             </div>
             <div class="especificaciones">
                 <h2 class="especificaciones-title">Especificaciones</h2>
                 <ul class="especificaciones-list">
                     <h3 class="especificaciones-list-titulo">Cuerpo</h3>
                     <ul class="especifcaciones-list-cuerpo">
-                        <li>Lorem ipsum</li>
-                        <li>Lorem ipsum</li>
-                        <li>Lorem ipsum</li>
-                        <li>Lorem ipsum</li>
+                        <li><%=producto.specification_body%></li>
                     </ul>
                     <h3 class="especificaciones-list-titulo">Mastil</h3>
                     <ul class="especifcaciones-list-mastil">
-                        <li>Lorem ipsum</li>
-                        <li>Lorem ipsum</li>
-                        <li>Lorem ipsum</li>
-                        <li>Lorem ipsum</li>
+                        <li><%=producto.specification_neck%></li>
                     </ul>
                     <h3 class="especificaciones-list-titulo">Accesorios</h3>
                     <ul class="especifcaciones-list-accesorios">
-                        <li>Lorem ipsum</li>
-                        <li>Lorem ipsum</li>
-                        <li>Lorem ipsum</li>
-                        <li>Lorem ipsum</li>
+                        <li><%=producto.specification_accesorie%></li>
                     </ul>
 
                 </ul>
