@@ -67,6 +67,17 @@ section {
     border-radius: 18px;
 }
 
+.error{
+    color: red;
+    font-size: 12px;
+    text-align: left;
+    margin: 0;
+}
+
+.invalid-field{
+    border: 1px solid red;
+}
+
 form {
     text-align: center;
 }
@@ -93,11 +104,25 @@ form div input {
     outline: none;
     font-family: 'Montserrat', 'Nunito', sans-serif;
     width: 100%;
+    border: 1px solid transparent;
 }
 
 form div input::placeholder {
     font-family: 'Montserrat', 'Nunito', sans-serif;
     opacity: 0.5;
+}
+
+.user-image label{
+    background-color: #47525E;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.user-image input{
+    display: none;
 }
 
 .terminos-condiciones{

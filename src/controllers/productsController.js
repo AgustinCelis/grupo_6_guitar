@@ -13,14 +13,17 @@ const controller = {
         let body = req.body;
         let jsonData = JSON.parse(fs.readFileSync(pathToDatabaseProducts, 'utf8'));
         let id = 1;
-        if(jsonData.length > 0){    
-            let lastProduct = jsonData[jsonData.length - 1]
-            id = lastProduct.id + 1
-        }
-        let objetoACrear = {id, ...body}
+        if(jsonData.length > 0){
+            let maxId = []  
+            jsonData.forEach(element =>{
+                return maxId.push(element.id)
+            });
+            id = Math.max(...maxId) + 1;
+        };
+        let objetoACrear = {id, ...body};
         jsonData.push(objetoACrear);
         fs.writeFileSync(pathToDatabaseProducts, JSON.stringify(jsonData));
-        res.send(jsonData);
+        res.redirect('/');
     },
     showEditProduct: function (req, res) {
         const jsonData = JSON.parse(fs.readFileSync(pathToDatabaseProducts), 'utf8');
@@ -30,10 +33,19 @@ const controller = {
         return res.status(200).render('products/edit', {product});
     },
     processEditProduct: function(req, res){
+        let body = req.body;
         let jsonData = JSON.parse(fs.readFileSync(pathToDatabaseProducts, 'utf8'));
-        
+
         let productToEdit = jsonData.find(product => product.id == req.params.id);
-        productToEdit = req.body;
+        
+        let productId = req.params.id;
+        let id = parseInt(productId);
+
+        productToEdit = {id, ...body};
+
+        jsonData = jsonData.filter(dato => dato.id != req.params.id);
+        
+        jsonData.push(productToEdit);
 
         fs.writeFileSync(pathToDatabaseProducts, JSON.stringify(jsonData));
         res.redirect('/')
