@@ -24,6 +24,7 @@ header {
     padding: 0;
 }
 
+/* MENU HAMBURGUESA*/
 #menuToggle {
     display: flex;
     flex-direction: column;
@@ -116,6 +117,7 @@ header {
 #menuToggle input:checked~ul {
     transform: none;
 }
+/* MENU HAMBURGUESA*/
 
 /* HEADER BARRA DE BUSQUEDA MOBILE */
 .searchbar {
@@ -131,6 +133,7 @@ header {
 .searchbar a:hover {
     color: red;
 }
+/* HEADER BARRA DE BUSQUEDA MOBILE */
 
 
 /* HEADER LOGO */
@@ -158,6 +161,7 @@ header {
     font-size: 2em;
     margin: 0;
 }
+/* HEADER LOGO */
 
 /* CARRITO Y CUENTA ICONOS */
 .nav-cart {
@@ -175,6 +179,10 @@ header {
 }
 
 .nav-account {
+    display: none;
+}
+
+.nav-avatar {
     display: none;
 }
 
@@ -198,12 +206,16 @@ header {
     width: 27px;
     height: 24px;
 }
+/* CARRITO Y CUENTA ICONOS */
 
-/* CATEGORIA DE GUITARRAS OCULTAS */
+/* CATEGORIA DE GUITARRAS OCULTO */
 .nav-categories{
     display: none;
 }
+/* CATEGORIA DE GUITARRAS OCULTO */
 
+
+/* MEDIA QUERY DE +769PX */
 @media (min-width: 769px) {
     header {
         width: 100%;
@@ -211,39 +223,69 @@ header {
         justify-content: space-around;
     }
 
+    /*MENU HAMBURGUESA*/
     .menuToggle{
         order: 1;
     }
+    /*MENU HAMBURGUESA*/
 
+    /*BARRA DE BUSQUEDA*/
     .searchbar{
         order: 2;
         display: flex;
         justify-content: center;
         width: 60px;
     }
+    /*BARRA DE BUSQUEDA*/
 
+    /*LOGO*/
     .nav-logo{
         order: 3;
         display: flex;
         justify-content: center;
         width: 60px;
     }
+    /*LOGO*/
 
+    /*CARRITO*/
     .nav-cart{
         order: 4;
         display: flex;
         justify-content: center;
         width: 60px;
     }
+    /*CARRITO*/
   
+    /*USUARIO*/
     .nav-account {
         order: 5;
         display: flex;
         justify-content: center;
         width: 60px;
     }
-}
+    /*USUARIO*/
 
+    /*USUARIO LOGUEADO*/
+    .nav-avatar {
+        order: 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        object-fit: cover;
+    }
+    .nav-avatar  img{
+        object-fit: cover;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    /*USUARIO LOGUEADO*/
+}
+/* MEDIA QUERY DE +769PX */
+
+
+/* MEDIA QUERY DE +1280PX */
 @media (min-width: 1280px) {
     header {
         height: 64px;
@@ -259,10 +301,13 @@ header {
         margin: 0;
     }
 
+    /*MENU HAMBURGUESA*/
     #menuToggle {
         display: none;
     }
-
+    /*MENU HAMBURGUESA*/
+    
+    /*LOGO*/
     .nav-logo {
         order: 1;
         display: flex;
@@ -274,12 +319,16 @@ header {
         position: static;
         width: 100%;
     }
+    /*LOGO*/
 
+    /*BARRA DE BUSQUEDA*/
     .searchbar {
         order: 2;
         font-size: 1.4em;
     }
+    /*BARRA DE BUSQUEDA*/
 
+    /*CATEGORIAS*/
     .nav-categories {
         display: flex;
         order: 3;
@@ -359,7 +408,9 @@ header {
     .categories-list li:hover > .nav-categories-display{
         transform: none;
     }
+    /*CATEGORIAS*/
 
+    /* DISPLAY DE LAS DISTINTAS CATEGORIAS */
     .nav-menu-display-electricas{
         z-index: 1001;
         display: flex;
@@ -414,18 +465,41 @@ header {
         font-weight: 500;
         justify-content: center;
     }
+    /* DISPLAY DE LAS DISTINTAS CATEGORIAS */
 
+    /* CARRITO */
     .nav-cart {
         order: 4;
         font-size: 1.4em;
     }
+    /* CARRITO */
 
+    /* USUARIO */
     .nav-account {
         order: 5;
         font-size: 1.4em;
     }
-}
+    /* USUARIO */
 
+    /* USUARIO LOGUEADO */
+    .nav-avatar {
+        order: 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        object-fit: cover;
+    }
+    .nav-avatar  img{
+        object-fit: cover;
+        width: 40px;
+        height: 40px;
+    }
+    /* USUARIO LOGUEADO */
+}
+/* MEDIA QUERY DE +1280PX */
+
+/* ARREGLOS EN OTRAS DIMENSIONES*/
 @media (min-width: 2200px){
     .nav-categories-display{
         top: 62px;
@@ -437,3 +511,4 @@ header {
         top: 61px;
     }
 }
+/* ARREGLOS EN OTRAS DIMENSIONES*/

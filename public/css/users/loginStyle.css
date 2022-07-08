@@ -101,6 +101,37 @@ form div input::placeholder {
     opacity: 0.5;
 }
 
+.div-recordar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.div-recordar label{
+    display: inline;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.div-recordar input{
+    padding: 0;
+    height: 15px;
+    width: 15px;
+    margin: 0;
+}
+
+ /* ERRORES */
+.error {
+    padding: 0;
+    margin: 0;
+    color: red;
+}
+
 .cuentas-externas {
     display: flex;
     width: 100%;

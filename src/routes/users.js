@@ -3,9 +3,9 @@ const path = require('path');
 const router = express.Router();
 const usersController = require('../controllers/usersController');
 const multer = require('multer');
-const {
-    body
-} = require('express-validator');
+const {body} = require('express-validator');
+
+const guestMiddleware = require('../database/middlewares/guestMiddleware.js');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -31,7 +31,7 @@ const validations = [
         let acceptedExtensions = ['.jpg', '.png', '.jpeg'];
         if (!file) {
             throw new Error('Tienes que subir una imagen');
-        } else if(file && username && email && password && confirm_password){
+        } else{
             let fileExtension = path.extname(file.originalname);
             if (!acceptedExtensions.includes(fileExtension)) {
                 throw new Error(`Formato valido, solo se permite ${acceptedExtensions.join(', ')}`);
@@ -43,11 +43,15 @@ const validations = [
 ]
 
 // Login
-router.get('/user/login', usersController.showLogin);
+router.get('/user/login', guestMiddleware, usersController.showLogin);
 router.post('/user/login', usersController.processLogin);
 
 // Register
-router.get('/user/register', usersController.showRegister);
+router.get('/user/register', guestMiddleware, usersController.showRegister);
 router.post('/user/register', uploadFile.single('user_image'), validations, usersController.processRegister);
+
+
+// LOGOUT
+router.get('/user/logout', usersController.logout);
 
 module.exports = router;

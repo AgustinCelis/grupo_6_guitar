@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <%- include('../partials/header') %>
+    <%- include('../partials/navbar') %>
     <main>
         <section class="producto">
             <h1 class="product-title">AMERICAN ULTRA<br>STRATOCASTER® HSS</h1>
@@ -31,12 +31,12 @@
             </div>
             <div class="product-image">
                 <a href="">
-                    <img src='/images/guitarras/detalles/<%=producto.image%>'>
+                    <img src='/images/guitarras/detalles/<%=product.image%>'>
                 </a>
             </div>
             <div class="producto-descripcion-precio-comprar">
                 <h1 class="product-title-inside-div">
-                    <%=(producto.type_of_guitar.toUpperCase() + " " + producto.name.toUpperCase())%>
+                    <%=(product.type_of_guitar.toUpperCase() + " " + product.name.toUpperCase())%>
                 </h1>
                 <ul class="nav-carrousel">
                     <li></li>
@@ -48,10 +48,10 @@
                         <%function numberWithCommas(price) {%>
                         <% return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'); %>
                         <% } %>
-                        <%=numberWithCommas(`$${producto.price}`)%>
+                        <%=numberWithCommas(`$${product.price}`)%>
                     </span>
                 </div>
-                <div class="product-description"><%=producto.description%></div>
+                <div class="product-description"><%=product.description%></div>
                 <div class="color">
                     <p class="color-title">Color</p>
                     <ul class="color-options">
@@ -63,7 +63,7 @@
                     </ul>
                 </div>
                 <div class="product-stock-disponible">
-                    <span>(<%=producto.available_amount%> disponibles)</span>
+                    <span>(<%=product.available_amount%> disponibles)</span>
                     <div class="product-cantidad">
                         <span>Cantidad:</span>
                         <span><i class="fa-solid fa-angle-up"></i></span>
@@ -89,11 +89,15 @@
             <div class="caracteristicas">
                 <h2 class="caracteristicas-title">Caracteristicas</h2>
                 <%for(let index = 1; index <= 4; index++){%>
-                    <%let caracteristica = "producto.characteristic_" + index%>
-                    <div class="caracteristicas-list">
+                <%let caracteristica = `product.characteristic_${index}`%>
+                <%if((eval(caracteristica)).length > 0){%>
+                <div class="caracteristicas-list">
                     <img src="/images/detail/list-caracteristicas.svg">
-                    <span><%=eval(caracteristica)%></span>
-                    </div>
+                    <span>
+                        <%=eval(caracteristica)%>
+                    </span>
+                </div>
+                <% } %>
                 <%}%>
             </div>
             <div class="especificaciones">
@@ -101,16 +105,16 @@
                 <ul class="especificaciones-list">
                     <h3 class="especificaciones-list-titulo">Cuerpo</h3>
                     <ul class="especifcaciones-list-cuerpo">
-                        <li><%=producto.specification_body%></li>
-                    </ul>
-                    <h3 class="especificaciones-list-titulo">Mastil</h3>
-                    <ul class="especifcaciones-list-mastil">
-                        <li><%=producto.specification_neck%></li>
-                    </ul>
-                    <h3 class="especificaciones-list-titulo">Accesorios</h3>
-                    <ul class="especifcaciones-list-accesorios">
-                        <li><%=producto.specification_accesorie%></li>
-                    </ul>
+                        <li><%=product.specification_body%></li>
+                </ul>
+                <h3 class="especificaciones-list-titulo">Mastil</h3>
+                <ul class="especifcaciones-list-mastil">
+                    <li><%=product.specification_neck%></li>
+                </ul>
+                <h3 class="especificaciones-list-titulo">Accesorios</h3>
+                <ul class="especifcaciones-list-accesorios">
+                    <li><%=product.specification_accesorie%></li>
+                </ul>
 
                 </ul>
         </section>
@@ -118,10 +122,10 @@
             <span class="similares-title">Productos similares</span>
             <ul class="similares-list">
                 <li>
-                    <div class="producto-similar">
+                    <div class="similar-product">
                         <a href="/producto/detalle">
                             <img src="/images/guitarras/electricas-display/flyingv.png">
-                            <div class="producto-similar-descripcion">
+                            <div class="similar-product-descripcion">
                                 <span>Lorem ipsum</span>
                             </div>
                     </div>
@@ -129,10 +133,10 @@
                     </div>
                 </li>
                 <li>
-                    <div class="producto-similar">
+                    <div class="similar-product">
                         <a href="/producto/detalle">
                             <img src="/images/guitarras/electricas-display/prs.png">
-                            <div class="producto-similar-descripcion">
+                            <div class="similar-product-descripcion">
                                 <span>Lorem ipsum</span>
                             </div>
                     </div>
@@ -140,10 +144,10 @@
                     </div>
                 </li>
                 <li>
-                    <div class="producto-similar">
+                    <div class="similar-product">
                         <a href="/producto/detalle">
                             <img src="/images/guitarras/electricas-display/lespaul.png">
-                            <div class="producto-similar-descripcion">
+                            <div class="similar-product-descripcion">
                                 <span>Lorem ipsum</span>
                             </div>
                     </div>
@@ -151,10 +155,10 @@
                     </div>
                 </li>
                 <li>
-                    <div class="producto-similar">
+                    <div class="similar-product">
                         <a href="/producto/detalle">
                             <img src="/images/guitarras/electricas-display/superstrat.png">
-                            <div class="producto-similar-descripcion">
+                            <div class="similar-product-descripcion">
                                 <span>Lorem ipsum</span>
                             </div>
                         </a>

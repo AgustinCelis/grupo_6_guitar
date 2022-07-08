@@ -9,13 +9,13 @@
 
 <body>
     <main>
-        <form action="/products/edit/<%=product.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form action="/products/edit/<%=product != undefined ? product.id : ""%>?_method=PUT" method="POST" enctype="multipart/form-data">
 
-            <input type="text" name="name" value="<%=product.name%>">
+            <input type="text" name="name" value="<%=product != undefined ? product.name : ""%>">
 
-            <textarea name="description" maxlength="240" rows="4" cols="40"><%=product.description%></textarea>
+            <textarea name="description" maxlength="240" rows="4" cols="40"><%=product != undefined ? product.description : ""%></textarea>
 
-            <input type="number" name="price" value="<%=product.price%>">
+            <input type="number" name="price" value="<%=product != undefined ? product.price : ""%>">
 
             <div class="product-images">
                 <label for="product-images">Añadir imagenes del producto</label>
@@ -56,29 +56,29 @@
 
             <div class="cantidad-disponible-div">
                 <label for="available_amount">Cantidad disponible</label>
-                <input type="number" name="available_amount" value="<%=product.available_amount%>">
+                <input type="number" name="available_amount" value="<%=product != undefined ? product.available_amount : ""%>">
             </div>
 
             <div class="characteristics-div">
                 <p class="characteristics">
                     <label for="characteristic_1">Caracteristica 1</label>
                     <textarea name="characteristic_1" maxlength="240" rows="2"
-                        cols="20"><%=product.characteristic_1%></textarea>
+                        cols="20"><%=product != undefined ? product.characteristic_1 : ""%></textarea>
                 </p>
                 <p class="characteristics">
                     <label for="characteristic_2">Caracteristica 2</label>
                     <textarea name="characteristic_2" maxlength="240" rows="2"
-                        cols="20"><%=product.characteristic_2%></textarea>
+                        cols="20"><%=product != undefined ? product.characteristic_2 : ""%></textarea>
                 </p>
                 <p class="characteristics">
                     <label for="characteristic_3">Caracteristica 3</label>
                     <textarea name="characteristic_3" maxlength="240" rows="2"
-                        cols="20"><%=product.characteristic_3%></textarea>
+                        cols="20"><%=product != undefined ? product.characteristic_3 : ""%></textarea>
                 </p>
                 <p class="characteristics">
                     <label for="characteristic_4">Caracteristica 4</label>
                     <textarea name="characteristic_4" maxlength="240" rows="2"
-                        cols="20"><%=product.characteristic_4%></textarea>
+                        cols="20"><%=product != undefined ? product.characteristic_4 : ""%></textarea>
                 </p>
             </div>
 
@@ -86,17 +86,17 @@
                 <p class="specifications">
                     <label for="specification_body">Especificacion cuerpo</label>
                     <textarea name="specification_body" maxlength="240" rows="2"
-                        cols="20"><%=product.specification_body%></textarea>
+                        cols="20"><%=product != undefined ? product.specification_body : ""%></textarea>
                 </p>
                 <p class="specifications">
                     <label for="specification_neck">Especificacion mastil</label>
                     <textarea name="specification_neck" maxlength="240" rows="2"
-                        cols="20"><%=product.specification_neck%></textarea>
+                        cols="20"><%=product != undefined ? product.specification_neck : ""%></textarea>
                 </p>
                 <p class="specifications">
                     <label for="specification_accesorie">Especificacion accesorios</label>
                     <textarea name="specification_accesorie" maxlength="240" rows="2"
-                        cols="20"><%=product.specification_accesorie%></textarea>
+                        cols="20"><%=product != undefined ? product.specification_accesorie : ""%></textarea>
                 </p>
             </div>
 

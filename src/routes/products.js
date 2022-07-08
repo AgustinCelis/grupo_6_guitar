@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({storage: storage});
 
-// Lista de guitarras
+// Lista de todos los productos
 router.get('/products', productsController.showMainList);
 
 // Creacion de productos
@@ -27,9 +27,6 @@ router.post('/products/create', uploadFile.any(), productsController.processCrea
 // Edicion de productos
 router.get('/products/edit/:id', productsController.showEditProduct);
 router.put('/products/edit/:id', uploadFile.any(), productsController.processEditProduct);  
-
-// Panel interactivo de admin 
-router.get('/products/adminlist', productsController.showListAdmin);
 
 // Detalle de producto
 router.get('/products/detail/:id', productsController.showDetail);

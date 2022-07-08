@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/partials/header.css">
+<link rel="stylesheet" href="/css/partials/navbar.css">
 
 <header>
     <div id="menuToggle">
@@ -213,9 +213,16 @@
             <i class="fa-solid fa-cart-shopping"></i>
         </a>
     </div>
+    <% if(locals.userLogged){ %>
+    <div class="nav-avatar">
+        <img src="/images/users/<%=locals.userLogged.user_image%>">
+        <span><%=locals.userLogged.username%></span>
+    </div>
+    <% }else{%>
     <div class="nav-account">
         <a href="/user/login">
             <i class="fa-solid fa-user"></i>
         </a>
     </div>
+    <% } %>
 </header>

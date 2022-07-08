@@ -306,34 +306,34 @@ main {
   height: 140px;
 }
 
-.producto-similar {
+.similar-product {
   display: flex;
   flex-direction: column;
   border-radius: 20px;
   transition: all 200ms ease;
 }
 
-.producto-similar:hover {
+.similar-product:hover {
   background-color: #ebebeb;
 }
 
-.producto-similar a {
+.similar-product a {
   width: 100%;
   height: 100%;
   text-decoration: none;
 }
 
-.producto-similar a img {
+.similar-product a img {
   border-radius: 20px;
   width: 100%;
 }
 
-.producto-similar-descripcion {
+.similar-product-descripcion {
   text-align: center;
   font-size: 14px;
 }
 
-.producto-similar-descripcion span {
+.similar-product-descripcion span {
   color: #47525E;
 }
 
@@ -468,11 +468,11 @@ main {
     width: 90%;
   }
 
-  .producto-similar a img {
+  .similar-product a img {
     padding: 10px 10px 0px 10px;
   }
 
-  .producto-similar-descripcion {
+  .similar-product-descripcion {
     font-size: 16px;
     padding-bottom: 10px;
   }

@@ -24,7 +24,10 @@
             <form action="/user/login" method="POST">
                 <div class="usuario">
                     <label for="username">Usuario o e-mail</label>
-                    <input type="text" placeholder="Usuario o e-mail" name="username">
+                    <input type="text" 
+                    placeholder="Usuario o e-mail" 
+                    name="username"
+                    value="<%=locals.oldData ? oldData.username : null%>">
                     <%if (locals.errors && errors.username) { %>
                         <div class="error">
                             <%=errors.username.msg%>
@@ -34,11 +37,15 @@
                 <div class="password">
                     <label for="password">Contraseña</label>
                     <input type="password" placeholder="Contraseña" name="password">
-                    <% if (locals.errors && errors.password) { %>
+                    <%if (locals.errors && errors.password) { %>
                         <div class="error">
                             <%=errors.password.msg%>
                         </div>
                     <% } %>
+                </div>
+                <div class="div-recordar">
+                    <label for="remember_user">Recordar usuario</label>
+                    <input type="checkbox" name="remember_user" id="remember_user">
                 </div>
                 <div class="boton-submit">
                     <button type="submit">Iniciar sesión</button>
