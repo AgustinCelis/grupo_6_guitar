@@ -1,0 +1,11 @@
+Hola! Estos son unos tips para navegar mejor:
+
+- Si queres cerrar sesion, ingresa a la ruta: '/user/logout'. Esto esta hecho asi debido a que todavia no esta realizado el menu de usuario que permita el cierra de sesion.
+
+- Los links a los detalles de guitarras no estan hechos aun. Si queres testear, podes escribir '/produts/detail/4', el 4 es el id y es de ejemplo. Si el producto con ese id no existe, se hace un res.send aclarando que no existe.
+
+Si hay algunos problemas mas de navegacion, por favor hagannoslo saber. 
+
+Muchas gracias! 
+
+ATTE: grupo 6
