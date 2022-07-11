@@ -160,12 +160,9 @@ const controller = {
         userDB.push(userToCreate);
         fs.writeFileSync(pathToDatabaseUsers, JSON.stringify(userDB));
 
-
         req.session.userLogged = userToCreate;
 
         delete userToCreate.password;
-
-        console.log(userToCreate);
 
         return res.redirect('/');
     },

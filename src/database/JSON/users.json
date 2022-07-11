@@ -1,13 +1,7 @@
 [{
     "id": 1,
-    "username": "agus",
-    "email": "agus@gmail.com",
-    "password": "$2a$10$AFkLbT1SrHNke.9rvZNel.MSsmLaNkXxORDIHw3O3dV5dqa1q7DeW",
-    "user_image": "user_image_1657143066863.jpg"
-}, {
-    "id": 2,
-    "username": "nico",
-    "email": "nico@gmail.com",
-    "password": "$2a$10$dj71zvF/r6l/ANX/mvp9AeKzF74PFws.5FSPbeAYx1Lgd3rE9lTDy",
-    "user_image": "user_image_1657312489403.jpg"
+    "username": "arvid97",
+    "email": "arvid@gmail.com",
+    "password": "$2a$10$FanKFeTBOTrc98kg4BJkY.m8lb0QduC9K7znGya33J1l0Z38.oNqG",
+    "user_image": "user_image_1657578544156.jpg"
 }]

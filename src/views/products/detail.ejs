@@ -89,15 +89,15 @@
             <div class="caracteristicas">
                 <h2 class="caracteristicas-title">Caracteristicas</h2>
                 <%for(let index = 1; index <= 4; index++){%>
-                <%let caracteristica = `product.characteristic_${index}`%>
-                <%if((eval(caracteristica)).length > 0){%>
-                <div class="caracteristicas-list">
-                    <img src="/images/detail/list-caracteristicas.svg">
-                    <span>
-                        <%=eval(caracteristica)%>
-                    </span>
-                </div>
-                <% } %>
+                    <%let caracteristica = `product.characteristic_${index}`%>
+                    <%if((eval(caracteristica)).length > 0){%>
+                    <div class="caracteristicas-list">
+                        <img src="/images/detail/list-caracteristicas.svg">
+                        <span>
+                            <%=eval(caracteristica)%>
+                        </span>
+                    </div>
+                    <% } %>
                 <%}%>
             </div>
             <div class="especificaciones">

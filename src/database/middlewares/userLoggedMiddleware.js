@@ -1,4 +1,4 @@
-const userDB = require('../JSON/users.json')
+const userDB = require('../JSON/users.json');
 
 function userLoggedMiddleware(req, res, next) {
     res.locals.isLogged = false;
@@ -16,8 +16,6 @@ function userLoggedMiddleware(req, res, next) {
         delete userFromCookie.password
         req.session.userLogged = userFromCookie;
     }
-
-    console.log(userFromCookie);
 
     if (req.session.userLogged) {
         res.locals.isLogged = true;
